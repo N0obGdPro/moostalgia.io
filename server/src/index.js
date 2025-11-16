@@ -13,11 +13,10 @@ import { filter_chat } from "./moomoo/libs/filterchat.js";
 import { config } from "./moomoo/config.js";
 import { ConnectionLimit } from "./moomoo/libs/limit.js";
 import { fileURLToPath } from "node:url";
-import cors from "cors";
 
 const app = e();
 
-app.use(cors());
+
 app.use(e.json()); // Add JSON body parser for API requests 
 
 const colimit = new ConnectionLimit(4);
