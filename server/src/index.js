@@ -35,17 +35,48 @@ const CLIENT_DIST_DIR = path.resolve(__dirname, "../../dist/client");
 const INDEX = path.join(CLIENT_DIST_DIR, "html/play.html");
 const PORT = Number(process.env.PORT ?? 8080);
 const HOST = process.env.HOST ?? "0.0.0.0";
+const SERVER_START_TIME = Date.now();
+const SERVER_METADATA = {
+    name: process.env.SERVER_NAME ?? "MooMoo Server",
+    type: process.env.SERVER_TYPE ?? (config.isSandbox ? "sandbox" : "standard"),
+    region: process.env.SERVER_REGION ?? "global"
+};
 
 if (!fs.existsSync(INDEX)) {
     console.warn("[server] Client build not found. Run `npm run build --workspace client` first.");
 }
+
+const game = new Game;
 
 app.get("/", (req, res) => {
     res.sendFile(INDEX)
 });
 
 app.get("/ping", (_req, res) => {
-    res.send("Ok");
+    const activePlayers = game.players.filter(player => player.alive);
+    res.json({
+        status: "ok",
+        timestamp: new Date().toISOString(),
+        uptimeSeconds: Math.floor((Date.now() - SERVER_START_TIME) / 1000),
+        server: {
+            ...SERVER_METADATA,
+            host: HOST,
+            port: PORT,
+            isSandbox: Boolean(config.isSandbox),
+            maxPlayers: config.maxPlayers,
+            maxPlayersHard: config.maxPlayersHard
+        },
+        players: {
+            totalConnected: game.players.length,
+            activeCount: activePlayers.length,
+            list: activePlayers.map(player => ({
+                sid: player.sid,
+                name: player.name,
+                score: player.points,
+                kills: player.kills
+            }))
+        }
+    });
 });
 
 app.get("/play", (req, res) => {
@@ -53,8 +84,6 @@ app.get("/play", (req, res) => {
 });
 
 app.use(e.static(CLIENT_DIST_DIR));
-
-const game = new Game;
 
 wss.on("connection", async (socket, req) => {
 
