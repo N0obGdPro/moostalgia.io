@@ -406,9 +406,9 @@ function showLoadingText(text) {
 
 function bindEvents() {
     UTILS.hookTouchEvents(enterGameButton);
-    enterGameButton.addEventListener("click", function () {
+    enterGameButton.onclick = UTILS.checkTrusted(function () {
         enterGame();
-    })
+    });
     joinPartyButton.onclick = UTILS.checkTrusted(function () {
         setTimeout(function () {
             joinParty();

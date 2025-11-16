@@ -8,6 +8,8 @@ module.exports = function (GameObject, gameObjects, UTILS, config, players, serv
     this.objects = gameObjects;
     this.grids = {};
     this.updateObjects = [];
+    var cactusDamage = typeof config.cactusDamage === "number" ? config.cactusDamage : 20;
+    var desertStart = (typeof config.mapScale === "number" && typeof config.snowBiomeTop === "number") ? (config.mapScale - config.snowBiomeTop) : null;
 
     var tmpX, tmpY;
     var tmpS = config.mapScale / config.colGrid;
@@ -110,6 +112,12 @@ module.exports = function (GameObject, gameObjects, UTILS, config, players, serv
 
     var tmpObj;
     this.add = function (sid, x, y, dir, s, type, data, setSID, owner) {
+        if (!data && type === 1 && desertStart !== null && y >= desertStart) {
+            data = {
+                name: "cactus",
+                dmg: cactusDamage
+            };
+        }
         tmpObj = null;
         for (var i = 0; i < gameObjects.length; ++i) {
             if (gameObjects[i].sid == sid) {

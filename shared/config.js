@@ -87,23 +87,23 @@ var worldSpawnCounts = {
 // Animal spawn plan: index (animal type: 0=Cow, 1=Pig, 2=Bull, 3=Bully, 4=Wolf, 5=Bear, 6-8=Bosses),
 // desired (count to maintain), positions (optional: xRatio/yRatio 0-1 for spawn location)
 var animalSpawnPlan = [{
-    index: 0, desired: 13  // Cow
+    index: 0, desired: 4  // Cow
 }, {
-    index: 1, desired: 10  // Pig
+    index: 1, desired: 3  // Pig
 }, {
-    index: 4, desired: 20  // Wolf
+    index: 4, desired: 5  // Wolf
 }, {
-    index: 5, desired: 6   // Bear
+    index: 5, desired: 3   // duck
 }, {
-    index: 2, desired: 8   // Bull
+    index: 2, desired: 3   // Bull
 }, {
-    index: 3, desired: 6   // Bully
+    index: 3, desired: 2   // Bully
 }, {
-    index: 6, desired: 1, positions: [{ xRatio: 0.42, yRatio: 0.72 }]  // Boss #1
+    index: 6, desired: 0, positions: [{ xRatio: 0.42, yRatio: 0.72 }]  // Boss #1
 }, {
-    index: 7, desired: 1, positions: [{ xRatio: 0.18, yRatio: 0.22 }]  // Boss #2
+    index: 7, desired: 0, positions: [{ xRatio: 0.18, yRatio: 0.22 }]  // Boss #2
 }, {
-    index: 8, desired: 1, positions: [{ xRatio: 0.78, yRatio: 0.64 }]  // Boss #3
+    index: 8, desired: 0, positions: [{ xRatio: 0.78, yRatio: 0.64 }]  // Boss #3
 }];
 
 // Main game configuration
@@ -146,7 +146,7 @@ var groupedConfig = {
     },
 
     sandbox: {
-        isSandbox: true,
+        isSandbox: false,
         millPpsMultiplier: 5,
         sandboxBuildLimits: sandboxBuildLimits
     },
@@ -249,6 +249,10 @@ var groupedConfig = {
         immunitySpeedMultiplier: 0.75,
         normalCurrentEffect: 1.0,
         immunityCurrentEffect: 0.4
+    },
+
+    environment: {
+        cactusDamage: 20
     },
 
     shameSystem: {

@@ -119,13 +119,9 @@ export class Game {
             this.updateAnimals(delta);
             this.updateTurrets(delta);
 
-            /*for (const object of this.game_objects) 
-                object.update(delta);*/
-
-            // leaderboard
             {
 
-                const metric = player => config.isSandbox ? player.kills : player.points;
+                const metric = (player) => player.points
                 const sort = this.players.filter(x => x.alive).sort((a, b) => {
                     return metric(b) - metric(a);
                 });
