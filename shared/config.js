@@ -227,7 +227,7 @@ var groupedConfig = {
         levelMultiplier: 1.2,
         gatheringMultiplier: 4,
         goldBonusResources: 4,
-        goldGenerationXP: 1000
+        goldGenerationXP: 0.1
     },
 
     combat: {
