@@ -1571,23 +1571,17 @@ function gameInput(e) {
 }
 
 gameCanvas.addEventListener('mousedown', mouseDown, false);
-
 function mouseDown(e) {
     setUsingTouch(false);
-    if (attackState != 1) {
-        attackState = 1;
-        sendAtckState();
-    }
+    attackState = 1;
+    sendAtckState();
 }
 
 gameCanvas.addEventListener('mouseup', mouseUp, false);
-
 function mouseUp(e) {
     setUsingTouch(false);
-    if (attackState != 0) {
-        attackState = 0;
-        sendAtckState();
-    }
+    attackState = 0;
+    sendAtckState();
 }
 
 function getMoveDir() {
@@ -1667,6 +1661,7 @@ function keyDown(event) {
             } else if (keyNum == 32) {
                 attackState = 1;
                 sendAtckState();
+                updateClientCps();
             }
         }
     }
@@ -1700,7 +1695,7 @@ function sendAtckState() {
         if (attackState === 1) {
             recordClickEvent();
         }
-        io.send("F", attackState, (player.buildIndex >= 0 ? getAttackDir() : null));
+        io.send("F", attackState, getAttackDir());
     }
 }
 
