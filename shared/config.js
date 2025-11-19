@@ -87,17 +87,17 @@ var worldSpawnCounts = {
 // Animal spawn plan: index (animal type: 0=Cow, 1=Pig, 2=Bull, 3=Bully, 4=Wolf, 5=Bear, 6-8=Bosses),
 // desired (count to maintain), positions (optional: xRatio/yRatio 0-1 for spawn location)
 var animalSpawnPlan = [{
-    index: 0, desired: 4  // Cow
+    index: 0, desired: 2  // Cow
 }, {
-    index: 1, desired: 3  // Pig
+    index: 1, desired: 2  // Pig
 }, {
-    index: 4, desired: 5  // Wolf
+    index: 4, desired: 3  // Wolf
 }, {
-    index: 5, desired: 3   // duck
+    index: 5, desired: 1  // Duck
 }, {
-    index: 2, desired: 3   // Bull
+    index: 2, desired: 1  // Bull
 }, {
-    index: 3, desired: 2   // Bully
+    index: 3, desired: 1  // Bully
 }, {
     index: 6, desired: 0, positions: [{ xRatio: 0.42, yRatio: 0.72 }]  // Boss #1
 }, {

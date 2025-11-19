@@ -41,6 +41,8 @@ const SERVER_METADATA = {
     region: process.env.SERVER_REGION ?? "global"
 };
 
+const POINTS_RESOURCE_INDEX = config.resourceTypes ? config.resourceTypes.indexOf("points") : -1;
+
 if (!fs.existsSync(INDEX)) {
     console.warn("[server] Client build not found. Run `npm run build --workspace client` first.");
 }
@@ -336,6 +338,14 @@ wss.on("connection", async (socket, req) => {
                         if (hat) {
                             if (type) {
                                 if (!player.skins[id] && player.points >= hat.price) {
+                                    if (hat.price > 0) {
+                                        if (POINTS_RESOURCE_INDEX !== -1) {
+                                            player.addResource(POINTS_RESOURCE_INDEX, -hat.price, true);
+                                        } else {
+                                            player.points -= hat.price;
+                                            player.send("N", "points", player.points, 1);
+                                        }
+                                    }
                                     player.skins[id] = 1;
                                     emit("5", 0, id, 0);
                                 }

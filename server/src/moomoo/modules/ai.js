@@ -372,6 +372,9 @@ export class AI {
                     this.runFrom = null;
                     if (doer) {
                         scoreCallback(doer, this.killScore);
+                        if (this.killScore && typeof doer.earnXP === "function") {
+                            doer.earnXP(this.killScore * 2);
+                        }
                         if (this.drop) {
                             for (var i = 0; i < this.drop.length;) {
                                 doer.addResource(config.resourceTypes.indexOf(this.drop[i]), this.drop[i + 1]);

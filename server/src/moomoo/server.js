@@ -105,7 +105,8 @@ export class Game {
                     minimap_ext.push({
                         sid: player.sid,
                         x: player.x,
-                        y: player.y
+                        y: player.y,
+                        team: player.team || null
                     });
                 }
 
@@ -207,7 +208,17 @@ export class Game {
 
                 if (minimap_ext.length === 0) continue;
 
-                player.send("7", minimap_ext.filter(x => x.sid !== player.sid).flatMap(x => [x.x, x.y]));
+                const filteredMinimap = minimap_ext.filter(target => {
+                    if (target.sid === player.sid) {
+                        return false;
+                    }
+                    if (player.team && target.team !== player.team) {
+                        return false;
+                    }
+                    return true;
+                });
+
+                player.send("7", filteredMinimap.flatMap(x => [x.x, x.y]));
 
             }
 
