@@ -1246,21 +1246,8 @@ function prepareUI() {
     updateSkinColorPicker();
 
     UTILS.removeAllChildren(actionBar);
-    for (var i = 0; i < (items.weapons.length + items.list.length); ++i) {
-        (function (i) {
-            UTILS.generateElement({
-                id: "actionBarItem" + i,
-                class: "actionBarItem",
-                style: "display:none",
-                onmouseout: function () {
-                    showItemInfo();
-                },
-                parent: actionBar
-            });
-        })(i);
-    }
-    for (var i = 0; i < (items.list.length + items.weapons.length); ++i) {
-        (function (i) {
+   for (var i = 0; i < (items.list.length + items.weapons.length); ++i) {
+        (function(i) {
             var tmpCanvas = document.createElement('canvas');
             tmpCanvas.width = tmpCanvas.height = 66;
             var tmpContext = tmpCanvas.getContext('2d');
@@ -1269,45 +1256,55 @@ function prepareUI() {
             tmpContext.webkitImageSmoothingEnabled = false;
             tmpContext.mozImageSmoothingEnabled = false;
             if (items.weapons[i]) {
-                tmpContext.rotate((Math.PI / 4) + Math.PI);
+                tmpContext.rotate((Math.PI/4)+Math.PI);
                 var tmpSprite = new Image();
                 toolSprites[items.weapons[i].src] = tmpSprite;
-                tmpSprite.onload = function () {
+                tmpSprite.onload = function() {
                     this.isLoaded = true;
                     var tmpPad = 1 / (this.height / this.width);
                     var tmpMlt = (items.weapons[i].iPad || 1);
-                    tmpContext.drawImage(this, -(tmpCanvas.width * tmpMlt * config.iconPad * tmpPad) / 2, -(tmpCanvas.height * tmpMlt * config.iconPad) / 2, tmpCanvas.width * tmpMlt * tmpPad * config.iconPad, tmpCanvas.height * tmpMlt * config.iconPad);
+                    tmpContext.drawImage(this, -(tmpCanvas.width*tmpMlt*config.iconPad*tmpPad)/2, -(tmpCanvas.height*tmpMlt*config.iconPad)/2,
+                        tmpCanvas.width*tmpMlt*tmpPad*config.iconPad, tmpCanvas.height*tmpMlt*config.iconPad);
                     tmpContext.fillStyle = "rgba(0, 0, 70, 0)";
                     tmpContext.globalCompositeOperation = "source-atop";
                     tmpContext.fillRect(-tmpCanvas.width / 2, -tmpCanvas.height / 2, tmpCanvas.width, tmpCanvas.height);
                     document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
                 };
-                tmpSprite.src = ".././img/weapons/" + items.weapons[i].src + ".png";
-                var tmpUnit = document.getElementById('actionBarItem' + i);
-                tmpUnit.onmouseover = UTILS.checkTrusted(function () {
-                    showItemInfo(items.weapons[i], true);
-                });
-                tmpUnit.onclick = UTILS.checkTrusted(function () {
-                    selectToBuild(i, true);
-                });
-                UTILS.hookTouchEvents(tmpUnit);
+
+
+
+    //if (items.weapons[i].src == "hammer_1" || items.weapons[i].src == "axe_1" || items.weapons[i].src == "sword_1" || items.weapons[i].src == "stick_1") {
+        tmpContext.lineWidth = 3;
+        tmpContext.translate(5, -9); // ORG: -10, 5
+        tmpContext.rotate(2.05 * Math.PI); // ORG: 1.3 * Math.PI
+        tmpContext.strokeStyle = outlineColor;
+        tmpContext.imageSmoothingEnabled = !1;
+        tmpContext.webkitImageSmoothingEnabled = !1;
+        tmpContext.mozImageSmoothingEnabled = !1;
+        renderTool(items.weapons[i], null, 0, 0, tmpContext, 0.35);
+        document.getElementById("actionBarItem" + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")"; // old
+        // new document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
+
+    //} else {
+    //    tmpSprite.src = ".././img/weapons/" + items.weapons[i].src + ".png";
+    //}
+
+
+
+
             } else {
-                var tmpSprite = getItemSprite(items.list[i - items.weapons.length], true);
+                var tmpSprite = getItemSprite(items.list[i-items.weapons.length], true);
                 var tmpScale = Math.min(tmpCanvas.width - config.iconPadding, tmpSprite.width);
                 tmpContext.globalAlpha = 1;
+
+
                 tmpContext.drawImage(tmpSprite, -tmpScale / 2, -tmpScale / 2, tmpScale, tmpScale);
+
                 tmpContext.fillStyle = "rgba(0, 0, 70, 0)";
                 tmpContext.globalCompositeOperation = "source-atop";
                 tmpContext.fillRect(-tmpScale / 2, -tmpScale / 2, tmpScale, tmpScale);
                 document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
-                var tmpUnit = document.getElementById('actionBarItem' + i);
-                tmpUnit.onmouseover = UTILS.checkTrusted(function () {
-                    showItemInfo(items.list[i - items.weapons.length]);
-                });
-                tmpUnit.onclick = UTILS.checkTrusted(function () {
-                    selectToBuild(i - items.weapons.length);
-                });
-                UTILS.hookTouchEvents(tmpUnit);
+
             }
         })(i);
     }
@@ -2473,20 +2470,107 @@ function renderTail(index, ctxt, owner) {
 
 var toolSprites = {};
 
-function renderTool(obj, variant, x, y, ctxt) {
-    var tmpSrc = obj.src + (variant || "");
+function renderTool(obj, variant, x, y, ctxt, size) {
+    var a = obj;
+    var c = ctxt;
+    var b = x;
+    var d = y;
+    var e = e ? .35 : (size || 1);
+
+    var colorvar = "#939393";
+    var colorvar2 = "#9e7543";
+    var colorvar3 = "#bf8f54";
+    var colorvar4 = "#939393";
+
+    // console.log(variant);
+    console.log("DEBUG VARIANT TO: " + variant);
+
+    if (variant == null || "") {
+        //console.log("Equipping Normal Weapon");
+        colorvar = "#939393";
+        colorvar2 = "#9e7543";
+        colorvar3 = "#bf8f54";
+        colorvar4 = "#939393";
+    } else if (variant == "_g") {
+        //console.log("Equipping Golden Weapon");
+        colorvar = "#F7CF45";
+        colorvar2 = "#F7CF45";
+        colorvar3 = "#F7CF45";
+        colorvar4 = "#939393";
+    } else if (variant == "_d") {
+        //console.log("Equipping Diamond Weapon");
+        colorvar = "#6d92cd";
+        colorvar2 = "#6d92cd";
+        colorvar3 = "#6d92cd";
+        colorvar4 = "#535353";
+    } else if (variant == "_r") {
+        //console.log("Equipping Ruby Weapon");
+        colorvar = "#be5454";
+        colorvar2 = "#be5454";
+        colorvar3 = "#be5454";
+        colorvar4 = "#535353";
+    } else if (variant == "_e") {
+        //console.log("Equipping Emerald Weapon");
+        colorvar = "#7B935D";
+        colorvar2 = "#7B935D";
+        colorvar3 = "#7B935D";
+        colorvar4 = "#535353";
+    }
+
+    if (obj.src == "hammer_1" || obj.src == "axe_1" || obj.src == "sword_1") {
+        // HAMMER
+        obj.src == "hammer_1" ? (
+        c.fillStyle = "#9e7543",
+        c.roundRect(b - 18 * e, d - 44 * e, 16 * e, 125 * e, 5 * e),
+        c.fill(),
+        c.stroke(),
+        c.fillStyle = colorvar,
+        c.roundRect(b - 25 * e, d + 49 * e, 45 * e, 25 * e, 5 * e),
+        c.fill(),
+        c.stroke()
+        ) :
+
+        // AXE
+        obj.src == "axe_1" ? (
+        c.fillStyle = "#9e7543",
+        c.roundRect(b - 18 * e, d - 44 * e, 16 * e, 135 * e, 5 * e),
+        c.fill(),
+        c.stroke(),
+        c.fillStyle = colorvar,
+        c.roundRect(b - 25 * e, d + 49 * e, 60 * e, 34 * e, 5 * e),
+        c.fill(),
+        c.stroke()
+        ) :
+
+        // SWORD
+        obj.src == "sword_1" ? (
+        c.fillStyle = "#9e7543",
+        c.roundRect(b - 18 * e, d - 44 * e, 16 * e, 125 * e, 5 * e),
+        c.fill(),
+        c.stroke(),
+        c.fillStyle = colorvar,
+        c.roundRect(b - 22 * e, d + 40 * e, 25 * e, 70 * e, 4 * e),
+        c.fill(),
+        c.stroke()
+        ) :
+
+    } else {
+           var tmpSrc = obj.src + (variant||"");
     var tmpSprite = toolSprites[tmpSrc];
     if (!tmpSprite) {
         tmpSprite = new Image();
-        tmpSprite.onload = function () {
+        tmpSprite.onload = function() {
             this.isLoaded = true;
         }
         tmpSprite.src = ".././img/weapons/" + tmpSrc + ".png";
         toolSprites[tmpSrc] = tmpSprite;
     }
-    if (tmpSprite.isLoaded) {
-        ctxt.drawImage(tmpSprite, x + obj.xOff - (obj.length / 2), y + obj.yOff - (obj.width / 2), obj.length, obj.width);
+    if (tmpSprite.isLoaded)
+        ctxt.drawImage(tmpSprite, x+obj.xOff-(obj.length/2), y+obj.yOff-(obj.width/2), obj.length, obj.width);
+
     }
+
+
 }
 
 var gameObjectSprites = {};
