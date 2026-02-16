@@ -1277,7 +1277,7 @@ function prepareUI() {
                     var tmpPad = 1 / (this.height / this.width);
                     var tmpMlt = (items.weapons[i].iPad || 1);
                     tmpContext.drawImage(this, -(tmpCanvas.width * tmpMlt * config.iconPad * tmpPad) / 2, -(tmpCanvas.height * tmpMlt * config.iconPad) / 2, tmpCanvas.width * tmpMlt * tmpPad * config.iconPad, tmpCanvas.height * tmpMlt * config.iconPad);
-                    tmpContext.fillStyle = "rgba(0, 0, 70, 0.1)";
+                    tmpContext.fillStyle = "rgba(0, 0, 70, 0)";
                     tmpContext.globalCompositeOperation = "source-atop";
                     tmpContext.fillRect(-tmpCanvas.width / 2, -tmpCanvas.height / 2, tmpCanvas.width, tmpCanvas.height);
                     document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
@@ -1296,7 +1296,7 @@ function prepareUI() {
                 var tmpScale = Math.min(tmpCanvas.width - config.iconPadding, tmpSprite.width);
                 tmpContext.globalAlpha = 1;
                 tmpContext.drawImage(tmpSprite, -tmpScale / 2, -tmpScale / 2, tmpScale, tmpScale);
-                tmpContext.fillStyle = "rgba(0, 0, 70, 0.1)";
+                tmpContext.fillStyle = "rgba(0, 0, 70, 0)";
                 tmpContext.globalCompositeOperation = "source-atop";
                 tmpContext.fillRect(-tmpScale / 2, -tmpScale / 2, tmpScale, tmpScale);
                 document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
@@ -1795,11 +1795,11 @@ function killObject(sid) {
 }
 
 function updateStatusDisplay() {
-    scoreDisplay.innerText = player.points;
-    foodDisplay.innerText = player.food;;
-    woodDisplay.innerText = player.wood;
-    stoneDisplay.innerText = player.stone;
-    killCounter.innerText = player.kills;
+    scoreDisplay.innerText = "Gold " + player.points;
+    foodDisplay.innerText = player.food + " Food";
+    woodDisplay.innerText = player.wood + " Wood";
+    stoneDisplay.innerText = player.stone + " Stone";
+    killCounter.innerText = player.kills + " Kills";
 }
 
 var iconSprites = {};
@@ -2047,11 +2047,11 @@ function updateGame() {
             } else if (waterMult <= 1) {
                 waterMult = waterPlus = 1;
             }
-            mainContext.globalAlpha = 1;
-            mainContext.fillStyle = "#dbc666";
-            renderWaterBodies(xOffset, yOffset, mainContext, config.riverPadding);
-            mainContext.fillStyle = "#91b2db";
-            renderWaterBodies(xOffset, yOffset, mainContext, (waterMult - 1) * 250);
+            //mainContext.globalAlpha = 1;
+            //mainContext.fillStyle = "#dbc666";
+            //renderWaterBodies(xOffset, yOffset, mainContext, config.riverPadding);
+            //mainContext.fillStyle = "#91b2db";
+            //renderWaterBodies(xOffset, yOffset, mainContext, (waterMult - 1) * 250);
         }
 
         mainContext.lineWidth = 4;
@@ -2127,7 +2127,7 @@ function updateGame() {
             mainContext.fillRect(tmpX, config.mapScale - yOffset, (maxScreenWidth - tmpX) - tmpMin, maxScreenHeight - (config.mapScale - yOffset));
         }
 
-        mainContext.globalAlpha = 1;
+        mainContext.globalAlpha = 0;
         mainContext.fillStyle = "rgba(0, 0, 70, 0.35)";
         mainContext.fillRect(0, 0, maxScreenWidth, maxScreenHeight);
 
@@ -2503,8 +2503,8 @@ function getResSprite(obj) {
         tmpContext.rotate(UTILS.randFloat(0, Math.PI));
         tmpContext.strokeStyle = outlineColor;
         tmpContext.lineWidth = outlineWidth;
-        tmpContext.lineJoin = "round";
-        tmpContext.lineCap = "round";
+        //tmpContext.lineJoin = "round";
+        //tmpContext.lineCap = "round";
         if (obj.type == 0) {
             var tmpScale;
             for (var i = 0; i < 2; ++i) {
@@ -2567,8 +2567,8 @@ function getItemSprite(obj, asIcon) {
         tmpContext.rotate(asIcon ? 0 : (Math.PI / 2));
         tmpContext.strokeStyle = outlineColor;
         tmpContext.lineWidth = outlineWidth * (asIcon ? (tmpCanvas.width / 81) : 1);
-        tmpContext.lineJoin = "round";
-        tmpContext.lineCap = "round";
+        //tmpContext.lineJoin = "round";
+        //tmpContext.lineCap = "round";
         if (obj.name == "apple") {
             tmpContext.fillStyle = "#c15555";
             renderCircle(0, 0, obj.scale, tmpContext);
