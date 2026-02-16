@@ -159,8 +159,8 @@ var groupedConfig = {
         hitAngle: Math.PI / 2,
         baseHealth: 100,
         playerScale: 35,
-        playerSpeed: 0.23,
-        playerDecel: 0.33,
+        playerSpeed: 0.0016,
+        playerDecel: 0.993,
         nameY: 34,
         startItems: defaultStartItems,
         startWeapons: defaultStartWeapons,
@@ -172,7 +172,7 @@ var groupedConfig = {
     },
 
     animals: {
-        animalCount: 100000,  // deprecated - use animalSpawnPlan
+        animalCount: 0,  // deprecated - use animalSpawnPlan
         aiTurnRandom: 0.06,
         cowNames: ["NoobGdPro", "Infinity Spectral", "ShinZy", "Sid", "Steph", "Bmoe", "Romn", "Jononthecool", "Fiona", "Vince", "Nathan", "Nick", "Flappy", "Ronald", "Otis", "Pepe", "Mc Donald", "Theo", "Fabz", "Oliver", "Jeff", "Jimmy", "Helena", "Reaper", "Ben", "Alan", "Naomi", "XYZ", "Clever", "Jeremy", "Mike", "Destined", "Stallion", "Allison", "Meaty", "Sophia", "Vaja", "Joey", "Pendy", "Murdoch", "Theo", "Jared", "July", "Sonia", "Mel", "Dexter", "Quinn", "Milky"],
         animalSpawnPlan: animalSpawnPlan
@@ -194,21 +194,21 @@ var groupedConfig = {
 
     world: Object.assign({
         resourceTypes: ["wood", "food", "stone", "points"],
-        areaCount: 7,
+        areaCount: 6,
         riverWidth: 724*0,
         riverPadding: 114*0,
         waterCurrent: 0.0011*0,
         waveSpeed: 0.0001*0,
         waveMax: 1.3*0,
-        treeScales: [120, 125, 130, 135],
-        bushScales: [80, 85, 90],
-        rockScales: [80, 85, 90]
+        treeScales: [110, 115, 120, 125],
+        bushScales: [75, 80, 85, 89],
+        rockScales: [65, 75, 90]
     }, worldSpawnCounts, {
         spawnCounts: worldSpawnCounts
     }),
 
     biome: {
-        snowBiomeTop: 2400*0,
+        snowBiomeTop: 2400*-10,
         snowSpeed: 0.75
     },
 
@@ -217,7 +217,7 @@ var groupedConfig = {
     },
 
     map: {
-        mapScale: 11400,
+        mapScale: 8400,
         mapPingScale: 40,
         mapPingTime: 2200  // ms
     },
