@@ -94,9 +94,9 @@
                 <div id="gameName">Moostalgia.io</div>
                 <div id="loadingText">Loading...</div>
                 <div id="menuCardHolder" style="display:none">
-                    <div class="menuCard adMenuCard" style="max-width:300px;max-height:250px" id="adCard" hidden>
+                    <!-- <div class="menuCard adMenuCard" style="max-width:300px;max-height:250px" id="adCard" hidden>
                         <div id="moomoo-io_300x250" align="center" class="adsbygoogle" style="display:inline-block;width:300px;height:250px"></div>
-                    </div>
+                    </div> -->
                     <div style="display:inline-block">
                         <div class="menuCard" id="setupCard">
                             <input id="nameInput" placeholder="Enter Name" maxlength="15">
@@ -112,9 +112,9 @@
                     </div>
                     <div id="rightCardHolder">
                         <div class="menuCard" id="guideCard">
-                            <div class="menuHeader">Servers</div>
+                            <!-- <div class="menuHeader">Servers</div>
                             <div id="serverBrowser"></div>
-                            <div id="altServer"></div>
+                            <div id="altServer"></div> -->
                             <div class="menuHeader" style="margin-top:10px">Select Color</div>
                             <div id="skinColorHolder"></div>
                             <div class="menuHeader" style="margin-top:10px">How To Play</div>
@@ -128,9 +128,7 @@
                                 Select Item: 1-9 or Click<br/>
                                 Quick Select Food: Q<br/>
                                 Lock Rotation: X<br/>
-                                Ping Minimap: R<br/>
-                                Add Map Marker: C<br/>
-                                Chat: Enter Key<br/>Close Windows: ESC
+                                Chat: Enter Key<br/>
                             </div>
                             <div id="mobileInstructions" class="menuText">
                                 Movement: Drag on left side of screen<br/>
@@ -143,19 +141,19 @@
                                     Collect as many resources as you can before building your village.<br/><br/>
                                     Stay close to your village so you can protect it at all times.
                                 </div>
-                            <div class="menuHeader">Settings</div>
+                            <!-- <div class="menuHeader">Settings</div>
                             <div class="settingRadio">
                                 <input id="nativeResolution" type="checkbox"/>Use Native Resolution
                             </div>
                             <div class="settingRadio">
                                 <input id="showPing" type="checkbox"/>Show Ping
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
-                <div id="wideAdCard" class="menuCard adMenuCard" style="max-width:728px;max-height:90px;display:inline-block;margin-top:10px" hidden>
+                <!-- <div id="wideAdCard" class="menuCard adMenuCard" style="max-width:728px;max-height:90px;display:inline-block;margin-top:10px" hidden>
                     <div id="moomoo-io_728x90" align="center" class="adsbygoogle" style="display:inline-block;width:728px;height:90px"></div>
-                </div>
+                </div> -->
             </div>
             <div id="settingsButton" class="ytLink">
                 <i class="material-icons" style="font-size:30px;vertical-align:middle">&#xE8B8;</i>
@@ -190,13 +188,13 @@
         <div id="youtuberOf" class="legacyHidden">
             Featured Mootuber:
             <div class="spanLink" id="featuredYoutube"><a target="_blank" class="ytLink"
-                    href="https://web.archive.org/web/20200602171143/https://www.youtube.com/channel/UCj6C_tiDeATiKd3GX127XoQ">
+                    href="https://www.youtube.com/channel/UCj6C_tiDeATiKd3GX127XoQ">
                     <iclass="material-icons" style="vertical-align: top;"></i> LightThief</a></div>
         </div>
         </div>
     </div>
     <div id="pingDisplay" hidden>Not connected</div>
-    <div id="diedText">YOU DIED</div>
+    <div id="diedText">You died.</div>
     <div id="touch-controls-left"></div>
     <div id="touch-controls-right"></div>
     <div id="touch-controls-fullscreen"></div>
@@ -233,8 +231,9 @@
                 style="font-size:40px;vertical-align:middle">leaderboard</i></div>
         <div id="storeButton" class="uiElement gameButton"><i class="material-icons"
                 style="font-size:40px;vertical-align:middle">&#xE8D1;</i></div>
-        <div id="chatButton" class="uiElement gameButton"><i class="material-icons"
-                style="font-size:40px;vertical-align:middle">&#xE8AF;</i></div><canvas id="mapDisplay"></canvas>
+        <!-- <div id="chatButton" class="uiElement gameButton"><i class="material-icons"
+                style="font-size:40px;vertical-align:middle">&#xE8AF;</i></div> -->
+        <canvas id="mapDisplay"></canvas>
         <div id="performanceDisplay" hidden>
             <div class="performanceItem">
                 <span class="performanceLabel">Ping:</span>
@@ -254,10 +253,10 @@
             </div>
         </div>
         <div id="storeMenu">
-            <div style="padding-bottom:15px">
+            <!-- <div style="padding-bottom:15px">
                 <div class="storeTab" style="margin-right:10px" onclick="changeStoreIndex(0)">Hats</div>
                 <div class="storeTab" onclick="changeStoreIndex(1)">Accessories</div>
-            </div>
+            </div> -->
             <div id="storeHolder"></div>
         </div>
         <div id="allianceMenu">
