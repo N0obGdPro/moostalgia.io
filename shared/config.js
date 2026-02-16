@@ -61,16 +61,16 @@ var weaponVariants = [{
 }];
 
 // Player spawn defaults
-var defaultStartItems = [0, 3, 6, 10];  // Item IDs players spawn with
+var defaultStartItems = [0, 3, 6, 10, 4];  // Item IDs players spawn with
 var defaultStartWeapons = [0];  // Weapon IDs players spawn with
 var startResources = {
-    normal: 100,    // Starting score/points
+    normal: 0,    // Starting score/points
     moofoll: 100    // Starting moofoll currency
 };
 
 // Sandbox mode building limits
 var sandboxBuildLimits = {
-    mill: 1,
+    mill: 100,
     spikes: 200,
     traps: 100,
     general: 300
@@ -78,10 +78,10 @@ var sandboxBuildLimits = {
 
 // World resource spawn counts (trees/bushes are per area, rocks/gold are total for entire map)
 var worldSpawnCounts = {
-    treesPerArea: 30,
-    bushesPerArea: 12,
-    totalRocks: 120,
-    goldOres: 7
+    treesPerArea: 7,
+    bushesPerArea: 3,
+    totalRocks: 29,
+    goldOres: 5
 };
 
 // Animal spawn plan: index (animal type: 0=Cow, 1=Pig, 2=Bull, 3=Bully, 4=Wolf, 5=Bear, 6-8=Bosses),
@@ -115,8 +115,8 @@ var groupedConfig = {
     },
 
     server: {
-        serverUpdateRate: 9,
-        maxPlayers: baseMaxPlayers,
+        serverUpdateRate: 10,
+        maxPlayers: 70,
         maxPlayersHard: baseMaxPlayers + 10,
         collisionDepth: 6,
         minimapRate: 3000  // ms
@@ -127,15 +127,15 @@ var groupedConfig = {
     },
 
     networking: {
-        clientSendRate: 5
+        clientSendRate: 10
     },
 
     ui: {
-        healthBarWidth: 50,
+        healthBarWidth: 52,
         healthBarPad: 4.5,
         iconPadding: 15,
         iconPad: 0.9,
-        deathFadeout: 3000,  // ms
+        deathFadeout: 0,  // ms
         crownIconScale: 60,
         crownPad: 35
     },
@@ -146,21 +146,21 @@ var groupedConfig = {
     },
 
     sandbox: {
-        isSandbox: true,
+        isSandbox: false,
         millPpsMultiplier: 5,
         sandboxBuildLimits: sandboxBuildLimits
     },
 
     player: {
-        maxAge: 100,
+        maxAge: 15,
         gatherAngle: Math.PI / 2.6,
         gatherWiggle: 10,
         hitReturnRatio: 0.25,
         hitAngle: Math.PI / 2,
         baseHealth: 100,
         playerScale: 35,
-        playerSpeed: 0.0016,
-        playerDecel: 0.993,
+        playerSpeed: 0.23,
+        playerDecel: 0.33,
         nameY: 34,
         startItems: defaultStartItems,
         startWeapons: defaultStartWeapons,
@@ -168,13 +168,13 @@ var groupedConfig = {
     },
 
     customization: {
-        skinColors: ["#bf8f54", "#cbb091", "#896c4b", "#fadadc", "#ececec", "#c37373", "#4c4c4c", "#ecaff7", "#738cc3", "#8bc373"]
+        skinColors: ["#bf8f54", "#cbb091", "#896c4b", "#fadadc", "#ececec", "#c37373", "#4c4c4c", "#ecaff7", "#738cc3", "#8bc373", "#749589", "#7074A4", "#939393", "#91B2DB"]
     },
 
     animals: {
         animalCount: 100000,  // deprecated - use animalSpawnPlan
         aiTurnRandom: 0.06,
-        cowNames: ["Sid", "Steph", "Bmoe", "Romn", "Jononthecool", "Fiona", "Vince", "Nathan", "Nick", "Flappy", "Ronald", "Otis", "Pepe", "Mc Donald", "Theo", "Fabz", "Oliver", "Jeff", "Jimmy", "Helena", "Reaper", "Ben", "Alan", "Naomi", "XYZ", "Clever", "Jeremy", "Mike", "Destined", "Stallion", "Allison", "Meaty", "Sophia", "Vaja", "Joey", "Pendy", "Murdoch", "Theo", "Jared", "July", "Sonia", "Mel", "Dexter", "Quinn", "Milky"],
+        cowNames: ["NoobGdPro", "Infinity Spectral", "ShinZy", "Sid", "Steph", "Bmoe", "Romn", "Jononthecool", "Fiona", "Vince", "Nathan", "Nick", "Flappy", "Ronald", "Otis", "Pepe", "Mc Donald", "Theo", "Fabz", "Oliver", "Jeff", "Jimmy", "Helena", "Reaper", "Ben", "Alan", "Naomi", "XYZ", "Clever", "Jeremy", "Mike", "Destined", "Stallion", "Allison", "Meaty", "Sophia", "Vaja", "Joey", "Pendy", "Murdoch", "Theo", "Jared", "July", "Sonia", "Mel", "Dexter", "Quinn", "Milky"],
         animalSpawnPlan: animalSpawnPlan
     },
 
@@ -195,20 +195,20 @@ var groupedConfig = {
     world: Object.assign({
         resourceTypes: ["wood", "food", "stone", "points"],
         areaCount: 7,
-        riverWidth: 724,
-        riverPadding: 114,
-        waterCurrent: 0.0011,
-        waveSpeed: 0.0001,
-        waveMax: 1.3,
-        treeScales: [150, 160, 165, 175],
-        bushScales: [80, 85, 95],
+        riverWidth: 724*0,
+        riverPadding: 114*0,
+        waterCurrent: 0.0011*0,
+        waveSpeed: 0.0001*0,
+        waveMax: 1.3*0,
+        treeScales: [120, 125, 130, 135],
+        bushScales: [80, 85, 90],
         rockScales: [80, 85, 90]
     }, worldSpawnCounts, {
         spawnCounts: worldSpawnCounts
     }),
 
     biome: {
-        snowBiomeTop: 2400,
+        snowBiomeTop: 2400*0,
         snowSpeed: 0.75
     },
 
@@ -217,7 +217,7 @@ var groupedConfig = {
     },
 
     map: {
-        mapScale: 14400,
+        mapScale: 11400,
         mapPingScale: 40,
         mapPingTime: 2200  // ms
     },
@@ -249,10 +249,10 @@ var groupedConfig = {
     },
 
     water: {
-        normalSpeedMultiplier: 0.33,
-        immunitySpeedMultiplier: 0.75,
-        normalCurrentEffect: 1.0,
-        immunityCurrentEffect: 0.4
+        normalSpeedMultiplier: 0.33*0,
+        immunitySpeedMultiplier: 0.75*0,
+        normalCurrentEffect: 1.0*0,
+        immunityCurrentEffect: 0.4*0
     },
 
     environment: {
