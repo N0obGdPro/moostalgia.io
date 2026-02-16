@@ -318,7 +318,7 @@ module.exports.hats = [{
     invisTimer: 1000
 }];
 
-module.exports.accessories = [{
+module.exports.accessories = [/*{
     id: 12,
     name: "Snowball",
     price: 1000,
@@ -464,4 +464,4 @@ module.exports.accessories = [{
     xOff: 26,
     desc: "deal damage to players that damage you",
     dmg: 0.25
-}];
+}*/];
