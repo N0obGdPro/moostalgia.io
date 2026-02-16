@@ -2552,7 +2552,7 @@ function renderTool(obj, variant, x, y, ctxt) {
         c.roundRect(b - 22 * e, d + 40 * e, 25 * e, 70 * e, 4 * e),
         c.fill(),
         c.stroke()
-        );
+        )
 
     } else {
         var tmpSrc = obj.src + (variant || "");
