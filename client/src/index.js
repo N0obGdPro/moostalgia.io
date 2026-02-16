@@ -2473,20 +2473,17 @@ function renderTail(index, ctxt, owner) {
 
 var toolSprites = {};
 
-function renderTool(obj, variant, x, y, ctxt, size) {
+function renderTool(obj, variant, x, y, ctxt) {
     var a = obj;
     var c = ctxt;
     var b = x;
     var d = y;
-    var e = e ? .35 : (size || 1);
+    var e = 1;
 
     var colorvar = "#939393";
     var colorvar2 = "#9e7543";
     var colorvar3 = "#bf8f54";
     var colorvar4 = "#939393";
-
-    // console.log(variant);
-    console.log("DEBUG VARIANT TO: " + variant);
 
     if (variant == null || "") {
         //console.log("Equipping Normal Weapon");
@@ -2502,15 +2499,15 @@ function renderTool(obj, variant, x, y, ctxt, size) {
         colorvar4 = "#939393";
     } else if (variant == "_d") {
         //console.log("Equipping Diamond Weapon");
-        colorvar = "#6d92cd";
-        colorvar2 = "#6d92cd";
-        colorvar3 = "#6d92cd";
+        colorvar = "#749589";
+        colorvar2 = "#749589";
+        colorvar3 = "#749589";
         colorvar4 = "#535353";
     } else if (variant == "_r") {
         //console.log("Equipping Ruby Weapon");
-        colorvar = "#be5454";
-        colorvar2 = "#be5454";
-        colorvar3 = "#be5454";
+        colorvar = "#807AC4";
+        colorvar2 = "#807AC4";
+        colorvar3 = "#807AC4";
         colorvar4 = "#535353";
     } else if (variant == "_e") {
         //console.log("Equipping Emerald Weapon");
@@ -2558,22 +2555,20 @@ function renderTool(obj, variant, x, y, ctxt, size) {
         ) :
 
     } else {
-           var tmpSrc = obj.src + (variant||"");
+        var tmpSrc = obj.src + (variant || "");
     var tmpSprite = toolSprites[tmpSrc];
     if (!tmpSprite) {
         tmpSprite = new Image();
-        tmpSprite.onload = function() {
+        tmpSprite.onload = function () {
             this.isLoaded = true;
         }
         tmpSprite.src = ".././img/weapons/" + tmpSrc + ".png";
         toolSprites[tmpSrc] = tmpSprite;
     }
-    if (tmpSprite.isLoaded)
-        ctxt.drawImage(tmpSprite, x+obj.xOff-(obj.length/2), y+obj.yOff-(obj.width/2), obj.length, obj.width);
-
+    if (tmpSprite.isLoaded) {
+        ctxt.drawImage(tmpSprite, x + obj.xOff - (obj.length / 2), y + obj.yOff - (obj.width / 2), obj.length, obj.width);
     }
-
-
+    }
 }
 
 var gameObjectSprites = {};
