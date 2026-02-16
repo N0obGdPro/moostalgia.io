@@ -61,7 +61,7 @@ var weaponVariants = [{
 }];
 
 // Player spawn defaults
-var defaultStartItems = [0, 3, 6, 10, 2];  // Item IDs players spawn with
+var defaultStartItems = [0, 3, 6, 10, 4];  // Item IDs players spawn with
 var defaultStartWeapons = [0];  // Weapon IDs players spawn with
 var startResources = {
     normal: 0,    // Starting score/points
@@ -87,17 +87,17 @@ var worldSpawnCounts = {
 // Animal spawn plan: index (animal type: 0=Cow, 1=Pig, 2=Bull, 3=Bully, 4=Wolf, 5=Bear, 6-8=Bosses),
 // desired (count to maintain), positions (optional: xRatio/yRatio 0-1 for spawn location)
 var animalSpawnPlan = [{
-    index: 0, desired: 2  // Cow
+    index: 0, desired: 0  // Cow
 }, {
-    index: 1, desired: 2  // Pig
+    index: 1, desired: 0  // Pig
 }, {
-    index: 4, desired: 3  // Wolf
+    index: 4, desired: 0  // Wolf
 }, {
-    index: 5, desired: 1  // Duck
+    index: 5, desired: 0  // Duck
 }, {
-    index: 2, desired: 1  // Bull
+    index: 2, desired: 0  // Bull
 }, {
-    index: 3, desired: 1  // Bully
+    index: 3, desired: 0  // Bully
 }, {
     index: 6, desired: 0, positions: [{ xRatio: 0.42, yRatio: 0.72 }]  // Boss #1
 }, {
@@ -175,7 +175,7 @@ var groupedConfig = {
         animalCount: 0,  // deprecated - use animalSpawnPlan
         aiTurnRandom: 0.06,
         cowNames: ["NoobGdPro", "Infinity Spectral", "ShinZy", "Sid", "Steph", "Bmoe", "Romn", "Jononthecool", "Fiona", "Vince", "Nathan", "Nick", "Flappy", "Ronald", "Otis", "Pepe", "Mc Donald", "Theo", "Fabz", "Oliver", "Jeff", "Jimmy", "Helena", "Reaper", "Ben", "Alan", "Naomi", "XYZ", "Clever", "Jeremy", "Mike", "Destined", "Stallion", "Allison", "Meaty", "Sophia", "Vaja", "Joey", "Pendy", "Murdoch", "Theo", "Jared", "July", "Sonia", "Mel", "Dexter", "Quinn", "Milky"],
-        animalSpawnPlan: 0
+        animalSpawnPlan: animalSpawnPlan
     },
 
     weapons: {
