@@ -82,7 +82,7 @@
     <script src="./libs/jquery-3.2.1.min.js"></script>
     <script src="./libs/jquery-ui.js"></script>
     <div id="errorNotification" class="menuCard" style="display:none">
-        <div>It looks like MooMoo ran in to a problem. Please try <a target="_blank"
+        <div>It looks like Moostalgia.io ran in to a problem. Please try <a target="_blank"
                 href="https://www.computerhope.com/issues/ch001411.htm">disabling all of your browser extensions</a> and
             reloading the page.</div>
         <div style="text-align:center"><a onclick="errorNotification.style.display = 'none' "
@@ -91,10 +91,10 @@
     <div id="shutdownDisplay" hidden></div>
     <div id="mainMenu">
             <div id="menuContainer">
-                <div id="gameName">MOOMOO.io</div>
+                <div id="gameName">Moostalgia.io</div>
                 <div id="loadingText">Loading...</div>
                 <div id="menuCardHolder" style="display:none">
-                    <div class="menuCard adMenuCard" style="max-width:300px;max-height:250px" id="adCard">
+                    <div class="menuCard adMenuCard" style="max-width:300px;max-height:250px" id="adCard" hidden>
                         <div id="moomoo-io_300x250" align="center" class="adsbygoogle" style="display:inline-block;width:300px;height:250px"></div>
                     </div>
                     <div style="display:inline-block">
@@ -102,12 +102,12 @@
                             <input id="nameInput" placeholder="Enter Name" maxlength="15">
                             <altcha-widget id="altcha" challengeurl="https://api.moomoo.io/verify" hidefooter auto="onfocus"></altcha-widget>
                             <br/>
-                            <div id="enterGame" class="menuButton disabled">
+                            <div id="enterGame" class="menuButton">
                                 <span>Enter Game</span>
                             </div>
                         </div>
                         <div id="promoImgHolder" class="menuCard" style="display:block;margin-top:16px;padding-bottom:12px" id="setupCard">
-                            <img id="promoImg" src="./img/promotion/banner_4.png" style="width:300px;cursor:pointer">
+                            <a href="https://www.youtube.com/@NoobGdPro" target="_blank"><img id="promoImg" src="https://i.imgur.com/BF0gGo9.png" style="width:300px;cursor:pointer"></a>
                         </div>
                     </div>
                     <div id="rightCardHolder">
@@ -138,6 +138,11 @@
                                 Select Item: Touch item at bottom<br/>
                                 Ping Minimap: Touch map<br/>
                             </div>
+                            <div class="menuHeader">Tips</div>
+                                <div class="menuText">Hover on an item in your action bar for more information about the item.<br/><br/>
+                                    Collect as many resources as you can before building your village.<br/><br/>
+                                    Stay close to your village so you can protect it at all times.
+                                </div>
                             <div class="menuHeader">Settings</div>
                             <div class="settingRadio">
                                 <input id="nativeResolution" type="checkbox"/>Use Native Resolution
@@ -145,13 +150,10 @@
                             <div class="settingRadio">
                                 <input id="showPing" type="checkbox"/>Show Ping
                             </div>
-                            <div class="menuText">
-                                Created by <a href="https://frvr.com/" target="_blank" class="menuLink">FRVR</a>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <div id="wideAdCard" class="menuCard adMenuCard" style="max-width:728px;max-height:90px;display:inline-block;margin-top:10px">
+                <div id="wideAdCard" class="menuCard adMenuCard" style="max-width:728px;max-height:90px;display:inline-block;margin-top:10px" hidden>
                     <div id="moomoo-io_728x90" align="center" class="adsbygoogle" style="display:inline-block;width:728px;height:90px"></div>
                 </div>
             </div>
