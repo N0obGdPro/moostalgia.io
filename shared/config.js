@@ -61,7 +61,7 @@ var weaponVariants = [{
 }];
 
 // Player spawn defaults
-var defaultStartItems = [0, 3, 6, 10, 4];  // Item IDs players spawn with
+var defaultStartItems = [0, 3, 6, 10, 11, 12, 13,5,4,7,2,1];  // Item IDs players spawn with
 var defaultStartWeapons = [0];  // Weapon IDs players spawn with
 var startResources = {
     normal: 0,    // Starting score/points
