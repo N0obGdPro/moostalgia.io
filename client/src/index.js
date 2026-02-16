@@ -1743,7 +1743,7 @@ var firstSetup = true;
 
 function setupGame(yourSID) {
     loadingText.style.display = "none";
-    menuCardHolder.style.display = "flex";
+    menuCardHolder.style.display = "inline-block";
     mainMenu.style.display = "none";
     keys = {};
     playerSID = yourSID;
@@ -1777,7 +1777,7 @@ function killPlayer() {
     diedText.style.fontSize = "0px";
     deathTextScale = 0;
     setTimeout(function () {
-        menuCardHolder.style.display = "flex";
+        menuCardHolder.style.display = "inline-block";
         mainMenu.style.display = "block";
         diedText.style.display = "none";
     }, config.deathFadeout);
@@ -3225,7 +3225,7 @@ function startGame() {
     bindEvents();
     loadIcons();
     loadingText.style.display = "none";
-    menuCardHolder.style.display = "flex";
+    menuCardHolder.style.display = "inline-block";
     nameInput.value = getSavedVal("moo_name") || "";
     prepareUI();
     initPerformanceDisplay();
