@@ -112,9 +112,9 @@
                     </div>
                     <div id="rightCardHolder">
                         <div class="menuCard" id="guideCard">
-                            <!-- <div class="menuHeader">Servers</div>
-                            <div id="serverBrowser"></div>
-                            <div id="altServer"></div> -->
+                            <div class="menuHeader" hidden>Servers</div>
+                            <div id="serverBrowser" hidden></div>
+                            <div id="altServer" hidden></div>
                             <div class="menuHeader" style="margin-top:10px">Select Color</div>
                             <div id="skinColorHolder"></div>
                             <div class="menuHeader" style="margin-top:10px">How To Play</div>
@@ -141,13 +141,13 @@
                                     Collect as many resources as you can before building your village.<br/><br/>
                                     Stay close to your village so you can protect it at all times.
                                 </div>
-                            <!-- <div class="menuHeader">Settings</div>
-                            <div class="settingRadio">
+                            <div class="menuHeader" hidden>Settings</div>
+                            <div class="settingRadio" hidden>
                                 <input id="nativeResolution" type="checkbox"/>Use Native Resolution
                             </div>
-                            <div class="settingRadio">
+                            <div class="settingRadio" hidden>
                                 <input id="showPing" type="checkbox"/>Show Ping
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -206,7 +206,7 @@
             <div id="leaderboard">Leaderboard<div id="leaderboardData"></div>
             </div>
             <div></div>
-            <!--<div id="killCounter" class="resourceDisplay"></div>-->
+            <div id="killCounter" class="resourceDisplay" hidden></div>
         </div>
         <div id="itemInfoHolder" class="uiElement"></div>
         <div id="resDisplay">
@@ -231,8 +231,8 @@
                 style="font-size:40px;vertical-align:middle">leaderboard</i></div>
         <div id="storeButton" class="uiElement gameButton"><i class="material-icons"
                 style="font-size:40px;vertical-align:middle">&#xE8D1;</i></div>
-        <!-- <div id="chatButton" class="uiElement gameButton"><i class="material-icons"
-                style="font-size:40px;vertical-align:middle">&#xE8AF;</i></div> -->
+        <div id="chatButton" class="uiElement gameButton" hidden><i class="material-icons"
+                style="font-size:40px;vertical-align:middle">&#xE8AF;</i></div>
         <canvas id="mapDisplay"></canvas>
         <div id="performanceDisplay" hidden>
             <div class="performanceItem">
@@ -253,10 +253,10 @@
             </div>
         </div>
         <div id="storeMenu">
-            <!-- <div style="padding-bottom:15px">
+            <div style="padding-bottom:15px" hidden>
                 <div class="storeTab" style="margin-right:10px" onclick="changeStoreIndex(0)">Hats</div>
                 <div class="storeTab" onclick="changeStoreIndex(1)">Accessories</div>
-            </div> -->
+            </div> 
             <div id="storeHolder"></div>
         </div>
         <div id="allianceMenu">
