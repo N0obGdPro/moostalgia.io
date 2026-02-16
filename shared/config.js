@@ -61,7 +61,7 @@ var weaponVariants = [{
 }];
 
 // Player spawn defaults
-var defaultStartItems = [0, 3, 6, 10, 1];  // Item IDs players spawn with
+var defaultStartItems = [0, 3, 6, 10, 2];  // Item IDs players spawn with
 var defaultStartWeapons = [0];  // Weapon IDs players spawn with
 var startResources = {
     normal: 0,    // Starting score/points
@@ -175,7 +175,7 @@ var groupedConfig = {
         animalCount: 0,  // deprecated - use animalSpawnPlan
         aiTurnRandom: 0.06,
         cowNames: ["NoobGdPro", "Infinity Spectral", "ShinZy", "Sid", "Steph", "Bmoe", "Romn", "Jononthecool", "Fiona", "Vince", "Nathan", "Nick", "Flappy", "Ronald", "Otis", "Pepe", "Mc Donald", "Theo", "Fabz", "Oliver", "Jeff", "Jimmy", "Helena", "Reaper", "Ben", "Alan", "Naomi", "XYZ", "Clever", "Jeremy", "Mike", "Destined", "Stallion", "Allison", "Meaty", "Sophia", "Vaja", "Joey", "Pendy", "Murdoch", "Theo", "Jared", "July", "Sonia", "Mel", "Dexter", "Quinn", "Milky"],
-        animalSpawnPlan: animalSpawnPlan
+        animalSpawnPlan: 0
     },
 
     weapons: {
