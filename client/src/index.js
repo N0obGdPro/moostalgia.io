@@ -2127,8 +2127,8 @@ function updateGame() {
             mainContext.fillRect(tmpX, config.mapScale - yOffset, (maxScreenWidth - tmpX) - tmpMin, maxScreenHeight - (config.mapScale - yOffset));
         }
 
-        mainContext.globalAlpha = 0;
-        mainContext.fillStyle = "rgba(0, 0, 70, 0.35)";
+        mainContext.globalAlpha = 1;
+        mainContext.fillStyle = "rgba(0, 0, 70, 0)";
         mainContext.fillRect(0, 0, maxScreenWidth, maxScreenHeight);
 
         mainContext.strokeStyle = darkOutlineColor;
