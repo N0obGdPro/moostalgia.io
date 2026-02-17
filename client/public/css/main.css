@@ -1631,3 +1631,8 @@ span {
 	left: 0;
 	right: 0; */
 }
+
+#serverSelect {
+    width: 100%;
+    height: 24px;
+}
