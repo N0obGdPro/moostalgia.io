@@ -156,7 +156,7 @@ var groupedConfig = {
     },
 
     sandbox: {
-        isSandbox: SANDBOX_HTTP_BOOL,
+        isSandbox: false,
         millPpsMultiplier: 5,
         sandboxBuildLimits: sandboxBuildLimits
     },
@@ -178,7 +178,7 @@ var groupedConfig = {
     },
 
     customization: {
-        skinColors: ["#bf8f54", "#cbb091", "#896c4b", "#fadadc", "#ececec", "#c37373", "#4c4c4c", "#ecaff7", "#738cc3", "#8bc373", "#749589", "#7074A4", "#939393", "#91B2DB"]
+        skinColors: ["#bf8f54", "#cbb091", "#896c4b", "#fadadc", "#ececec", "#c37373", "#4c4c4c", "#ecaff7", "#738cc3", "#8bc373", "#749589", "#7074A4", "#F7CF45", "#91B2DB", "#B4DB62", "#C05C39", "#FFA954", "#938D77"]
     },
 
     animals: {
