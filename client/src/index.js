@@ -700,11 +700,11 @@ function showItemInfo(item, isWeapon, isStoreItem) {
             parent: itemInfoHolder
         });
         if (isStoreItem && item.price) {
-            UTILS.generateElement({
+            /*UTILS.generateElement({
                 class: "itemInfoReq",
                 text: "Price: " + item.price + " coins",
                 parent: itemInfoHolder
-            });
+            });*/
         } else if (isWeapon) {
             UTILS.generateElement({
                 class: "itemInfoReq",
@@ -1144,7 +1144,7 @@ function generateStoreList() {
                         UTILS.generateElement({
                             tag: "span",
                             class: "itemPrice",
-                            text: tmpArray[i].price,
+                            text: (tmpArray[i].price==0)?"FREE":tmpArray[i].price,
                             parent: tmp
                         })
                     } else if ((index ? player.tailIndex : player.skinIndex) == tmpArray[i].id) {
