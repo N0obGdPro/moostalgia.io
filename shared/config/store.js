@@ -67,7 +67,7 @@ module.exports.hats = [{
     name: "ShinZy Helmet",
     price: 0,
     scale: 240,
-    desc: "fr."
+    desc: "SpikZy ShinZy"
 }, {
     id: 44,
     name: "Polar Head",
