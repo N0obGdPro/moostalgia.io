@@ -7,85 +7,95 @@ module.exports.hats = [{
     desc: "Assigned by the anti-cheat system to flagged accounts."
 }, {
     id: 51,
-    name: "Moo Cap",
+    name: "Sid Suit",
     price: 0,
     scale: 120,
-    desc: "Classic Moo-branded cap for dedicated players."
+    desc: "Sidney de Vries is developer of MooMoo.io"
 }, {
     id: 50,
-    name: "Apple Cap",
-    price: 0,
+    name: "Honeycrisp Hat",
+    price: 5000,
     scale: 120,
-    desc: "Throwback cosmetic inspired by the Apple Farms event."
+    desc: "slowly regenerates health over time",
+    healthRegen: 3
 }, {
     id: 28,
     name: "Moo Head",
+    dontSell: true,
     price: 0,
     scale: 120,
     desc: "no effect"
 }, {
     id: 29,
     name: "Pig Head",
+    atkSpd: 0.78,
     price: 0,
     scale: 120,
-    desc: "no effect"
+    desc: "HOLY MOO FASTEST"
 }, {
     id: 30,
     name: "Fluff Head",
+    dontSell: true,
     price: 0,
     scale: 120,
     desc: "no effect"
 }, {
     id: 36,
     name: "Pandou Head",
+    dontSell: true,
     price: 0,
     scale: 120,
     desc: "no effect"
 }, {
     id: 37,
     name: "Bear Head",
+    dontSell: true,
     price: 0,
     scale: 120,
     desc: "no effect"
 }, {
     id: 38,
-    name: "Monkey Head",
+    name: "ShinZy",
     price: 0,
-    scale: 120,
-    desc: "no effect"
+    scale: 240,
+    desc: "fr."
 }, {
     id: 44,
     name: "Polar Head",
+    dontSell: true,
     price: 0,
     scale: 120,
     desc: "no effect"
 }, {
     id: 35,
     name: "Fez Hat",
+    dontSell: true,
     price: 0,
     scale: 120,
     desc: "no effect"
 }, {
     id: 42,
-    name: "Enigma Hat",
+    name: "10th Anniversary Cake",
     price: 0,
-    scale: 120,
-    desc: "Official Enigma community cosmetic."
+    scale: 480,
+    desc: "Happy M10Moo.io birthday community cosmetic!"
 }, {
     id: 43,
-    name: "Blitz Hat",
+    name: "NoobGdPro Top Hat",
     price: 0,
-    scale: 120,
-    desc: "Content creator collaboration item from Blitz."
+    scale: 480,
+    desc: "hello world! ;)"
 }, {
     id: 49,
     name: "Bob XIII Hat",
+    dontSell: true,
     price: 0,
     scale: 120,
     desc: "Pay tribute to Bob XIII's channel."
 }, {
     id: 57,
     name: "Pumpkin",
+    dontSell: true,
     price: 50,
     scale: 120,
     desc: "Seasonal pumpkin cosmetic."
@@ -104,10 +114,9 @@ module.exports.hats = [{
 }, {
     id: 15,
     name: "Winter Cap",
-    price: 600,
+    price: 1000,
     scale: 120,
-    desc: "allows you to move at normal speed in snow",
-    coldM: 1
+    desc: "no effect",
 }, {
     id: 5,
     name: "Cowboy Hat",
@@ -123,39 +132,40 @@ module.exports.hats = [{
 }, {
     id: 18,
     name: "Explorer Hat",
-    price: 2000,
+    price: 100,
     scale: 120,
     desc: "no effect"
 }, {
     id: 31,
     name: "Flipper Hat",
+    dontSell: true,
     price: 2500,
     scale: 120,
     desc: "have more control while in water",
     watrImm: true
 }, {
     id: 1,
-    name: "Marksman Cap",
+    name: "Fiddler Hat",
     price: 3000,
     scale: 120,
-    desc: "increases arrow speed and range",
-    aMlt: 1.3
+    desc: "no effect",
 }, {
     id: 10,
     name: "Bush Gear",
-    price: 3000,
+    price: 10000,
     scale: 160,
     desc: "allows you to disguise yourself as a bush"
 }, {
     id: 48,
     name: "Halo",
+    dontSell: true,
     price: 3000,
     scale: 120,
     desc: "no effect"
 }, {
     id: 6,
     name: "Soldier Helmet",
-    price: 4000,
+    price: 5000,
     scale: 120,
     desc: "reduces damage taken but slows movement",
     spdMult: 0.94,
@@ -163,6 +173,7 @@ module.exports.hats = [{
 }, {
     id: 23,
     name: "Anti Venom Gear",
+    dontSell: true,
     price: 4000,
     scale: 120,
     desc: "makes you immune to poison",
@@ -170,6 +181,7 @@ module.exports.hats = [{
 }, {
     id: 13,
     name: "Medic Gear",
+    dontSell: true,
     price: 5000,
     scale: 110,
     desc: "slowly regenerates health over time",
@@ -184,6 +196,7 @@ module.exports.hats = [{
 }, {
     id: 32,
     name: "Musketeer Hat",
+    dontSell: true,
     price: 5000,
     scale: 120,
     desc: "reduces cost of projectiles",
@@ -202,9 +215,7 @@ module.exports.hats = [{
     name: "Emp Helmet",
     price: 6000,
     scale: 120,
-    desc: "turrets won't attack but you move slower",
-    antiTurret: 1,
-    spdMult: 0.7
+    desc: "no effect",
 }, {
     id: 12,
     name: "Booster Hat",
@@ -230,6 +241,7 @@ module.exports.hats = [{
 }, {
     id: 46,
     name: "Bull Mask",
+    dontSell: true,
     price: 10000,
     scale: 120,
     desc: "bulls won't target you unless you attack them",
@@ -237,6 +249,7 @@ module.exports.hats = [{
 }, {
     id: 14,
     name: "Windmill Hat",
+    dontSell: true,
     topSprite: true,
     price: 10000,
     scale: 120,
@@ -245,7 +258,7 @@ module.exports.hats = [{
 }, {
     id: 11,
     name: "Spike Gear",
-    topSprite: true,
+    //topSprite: true,
     price: 10000,
     scale: 120,
     desc: "deal damage to players that damage you",
@@ -253,6 +266,7 @@ module.exports.hats = [{
 }, {
     id: 53,
     name: "Turret Gear",
+    dontSell: true,
     topSprite: true,
     price: 10000,
     scale: 120,
@@ -266,14 +280,14 @@ module.exports.hats = [{
 }, {
     id: 20,
     name: "Samurai Armor",
-    price: 12000,
+    price: 15000,
     scale: 120,
     desc: "increased attack speed and fire rate",
     atkSpd: 0.78
 }, {
     id: 58,
-    name: "Dark Knight",
-    price: 12000,
+    name: "Bushido Armor",
+    price: 15000,
     scale: 120,
     desc: "restores health when you deal damage",
     healD: 0.4
@@ -287,6 +301,7 @@ module.exports.hats = [{
 }, {
     id: 40,
     name: "Tank Gear",
+    dontSell: true,
     price: 15000,
     scale: 120,
     desc: "increased damage to buildings but slower movement",
@@ -295,6 +310,7 @@ module.exports.hats = [{
 }, {
     id: 52,
     name: "Thief Gear",
+    dontSell: true,
     price: 15000,
     scale: 120,
     desc: "steal half of a players gold when you kill them",
@@ -302,6 +318,7 @@ module.exports.hats = [{
 }, {
     id: 55,
     name: "Bloodthirster",
+    dontSell: true,
     price: 20000,
     scale: 120,
     desc: "Restore Health when dealing damage. And increased damage",
@@ -310,6 +327,7 @@ module.exports.hats = [{
 }, {
     id: 56,
     name: "Assassin Gear",
+    dontSell: true,
     price: 20000,
     scale: 120,
     desc: "Go invisible when not moving. Can't eat. Increased speed",
