@@ -605,7 +605,7 @@ module.exports.list = [{
     hideFromEnemy: true,
     health: 500,
     colDiv: 0.2,
-    scale: 50,
+    scale: 47,
     holdOffset: 20,
     placeOffset: -5
 }, {
@@ -618,7 +618,7 @@ module.exports.list = [{
     hideFromEnemy: false,
     health: 500,
     colDiv: 0,
-    scale: 52,
+    scale: 47,
     holdOffset: 20,
     placeOffset: -5
 }, {
