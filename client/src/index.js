@@ -378,9 +378,9 @@ function bindEvents() {
         enterGame();
     });
     joinPartyButton.onclick = UTILS.checkTrusted(function () {
-        setTimeout(function () {
+        //setTimeout(function () {
             joinParty();
-        }, 10);
+        //}, 10);
     });
     UTILS.hookTouchEvents(joinPartyButton);
     settingsButton.onclick = UTILS.checkTrusted(function () {
