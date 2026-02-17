@@ -12,13 +12,6 @@ module.exports.hats = [{
     scale: 120,
     desc: "Sidney de Vries is developer of MooMoo.io"
 }, {
-    id: 50,
-    name: "Honeycrisp Hat",
-    price: 5000,
-    scale: 120,
-    desc: "slowly regenerates health over time",
-    healthRegen: 3
-}, {
     id: 28,
     name: "Moo Head",
     dontSell: true,
@@ -157,12 +150,6 @@ module.exports.hats = [{
     desc: "slowly regenerates health over time",
     healthRegen: 3
 }, {
-    id: 10,
-    name: "Bush Gear",
-    price: 10000,
-    scale: 160,
-    desc: "allows you to disguise yourself as a bush"
-}, {
     id: 48,
     name: "Halo",
     dontSell: true,
@@ -237,6 +224,12 @@ module.exports.hats = [{
     scale: 120,
     desc: "knocks back enemies that attack you",
     dmgK: 0.6
+}, {
+    id: 10,
+    name: "Bush Gear",
+    price: 10000,
+    scale: 160,
+    desc: "allows you to disguise yourself as a bush"
 }, {
     id: 21,
     name: "Plague Mask",
