@@ -589,7 +589,7 @@ export class Player {
                 } else {
                     scoreCallback(doer, Math.round(this.age * killScoreMult * (doer.skin && doer.skin.kScrM ? doer.skin.kScrM : 1)));
                 }
-                var serverv = (this.server)this.server:false
+                var serverv = (this.server)?this.server:false
                 objectManager.removeAllItems(this.sid, serverv);
                 doer.send("N", "kills", doer.kills, 1);
             }
