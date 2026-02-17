@@ -156,7 +156,7 @@ exports.weapons = [{
     range: 70,
     gather: 2,
     speed: 400
-}, {
+}, /*{
     id: 2,
     type: 0,
     age: 8,
@@ -173,7 +173,7 @@ exports.weapons = [{
     range: 75,
     gather: 4,
     speed: 400
-}, {
+}, */{
     id: 3,
     type: 0,
     age: 2,
@@ -190,7 +190,7 @@ exports.weapons = [{
     range: 110,
     gather: 1,
     speed: 300
-}, {
+}, /*{
     id: 4,
     type: 0,
     age: 8,
@@ -399,7 +399,7 @@ exports.weapons = [{
     hideProjectile: true,
     spdMult: 0.6,
     speed: 1500
-}];
+}*/];
 
 module.exports.list = [{
     group: module.exports.groups[0],
@@ -422,7 +422,7 @@ module.exports.list = [{
     },
     scale: 27,
     holdOffset: 15
-}, {
+}, /*{
     age: 7,
     group: module.exports.groups[0],
     name: "cheese",
@@ -439,7 +439,7 @@ module.exports.list = [{
     },
     scale: 27,
     holdOffset: 15
-}, {
+}, */{
     group: module.exports.groups[1],
     name: "wood wall",
     desc: "provides protection for your village",
@@ -460,7 +460,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: -5
 }, {
-    age: 7,
+    age: 5,
     pre: 1,
     group: module.exports.groups[1],
     name: "castle wall",
@@ -493,7 +493,7 @@ module.exports.list = [{
     spritePadding: -23,
     holdOffset: 8,
     placeOffset: -5
-}, {
+}, /*{
     age: 9,
     pre: 1,
     group: module.exports.groups[2],
@@ -521,7 +521,7 @@ module.exports.list = [{
     spritePadding: -23,
     holdOffset: 8,
     placeOffset: -5
-}, {
+}, */{
     group: module.exports.groups[3],
     name: "windmill",
     desc: "generates gold over time",
@@ -549,7 +549,7 @@ module.exports.list = [{
     scale: 47,
     holdOffset: 20,
     placeOffset: 5
-}, {
+}, /*{
     age: 8,
     pre: 1,
     group: module.exports.groups[3],
@@ -564,8 +564,8 @@ module.exports.list = [{
     scale: 47,
     holdOffset: 20,
     placeOffset: 5
-}, {
-    age: 5,
+}, */{
+    //age: 5,
     group: module.exports.groups[4],
     type: 2,
     name: "mine",
@@ -575,7 +575,7 @@ module.exports.list = [{
     scale: 65,
     holdOffset: 20,
     placeOffset: 0
-}, {
+}, /*{
     age: 5,
     group: module.exports.groups[11],
     type: 0,
@@ -601,6 +601,20 @@ module.exports.list = [{
     scale: 50,
     holdOffset: 20,
     placeOffset: -5
+}, */{
+    age: 4,
+    group: module.exports.groups[5],
+    name: "door",
+    desc: "allows team mates to enter your village",
+    req: ["wood", 20, "stone", 5],
+    trap: false,
+    ignoreCollision: true,
+    hideFromEnemy: false,
+    health: 500,
+    colDiv: 0,
+    scale: 50,
+    holdOffset: 20,
+    placeOffset: -5
 }, {
     age: 4,
     group: module.exports.groups[6],
@@ -614,7 +628,7 @@ module.exports.list = [{
     scale: 45,
     holdOffset: 20,
     placeOffset: -5
-}, {
+}, /*{
     age: 7,
     group: module.exports.groups[7],
     doUpdate: true,
@@ -691,7 +705,7 @@ module.exports.list = [{
     scale: 45,
     holdOffset: 20,
     placeOffset: -5
-}];
+}*/];
 
 for (var i = 0; i < module.exports.list.length; ++i) {
     module.exports.list[i].id = i;
