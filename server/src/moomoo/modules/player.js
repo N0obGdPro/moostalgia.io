@@ -653,7 +653,7 @@ export class Player {
                     var placedItem = item;
                     if (item.pps) {
                         var sandboxMultiplier = config.isSandbox ? (config.millPpsMultiplier || 1) : 1;
-                        var ppsToAdd = item.pps * sandboxMultiplier;
+                        var ppsToAdd = (item.pps * sandboxMultiplier) * 0.001;
                         this.pps += ppsToAdd;
                         placedItem = Object.assign({}, item, {
                             pps: ppsToAdd
@@ -682,7 +682,7 @@ export class Player {
         // USE RESOURCES:
         this.useRes = function(item, mult) {
             if (config.isSandbox) {
-                return;
+                //return;
             }
             for (var i = 0; i < item.req.length;) {
                 this.addResource(config.resourceTypes.indexOf(item.req[i]), -Math.round(item.req[i + 1] * (mult || 1)));
