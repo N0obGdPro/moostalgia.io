@@ -241,7 +241,7 @@ var groupedConfig = {
     },
 
     economy: {
-        millPointsPerTick: 1
+        millPointsPerTick: sandbox.isSandbox?1 * millPpsMultiplier:1
     },
 
     combat: {
