@@ -306,7 +306,7 @@ export class Player {
                         goldTick = 10000 * this.sandboxMillCount;
                     }
                     this.addResource(3, goldTick, true);
-                    this.earnXP(this.pps * 10)
+                    this.earnXP(this.pps * 10000)
                 }
 
                 var regenAmount = (this.skin && this.skin.healthRegen ? this.skin.healthRegen : 0) + (this.tail && this.tail.healthRegen ? this.tail.healthRegen : 0);
