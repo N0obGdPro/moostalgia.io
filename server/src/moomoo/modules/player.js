@@ -303,10 +303,10 @@ export class Player {
                     if (millPoints && totalMills > 0) {
                         goldTick = totalMills * millPoints;
                     } else if (config.isSandbox && this.sandboxMillCount > 0) {
-                        goldTick = 10000 * this.sandboxMillCount;
+                        goldTick = 1 * this.sandboxMillCount;
                     }
                     this.addResource(3, goldTick, true);
-                    this.earnXP(this.pps * 10000)
+                    this.earnXP(this.pps * 1)
                 }
 
                 var regenAmount = (this.skin && this.skin.healthRegen ? this.skin.healthRegen : 0) + (this.tail && this.tail.healthRegen ? this.tail.healthRegen : 0);
@@ -653,7 +653,7 @@ export class Player {
                     var placedItem = item;
                     if (item.pps) {
                         var sandboxMultiplier = config.isSandbox ? (config.millPpsMultiplier || 1) : 1;
-                        var ppsToAdd = (item.pps * sandboxMultiplier) * 0.001;
+                        var ppsToAdd = (item.pps * sandboxMultiplier);
                         this.pps += ppsToAdd;
                         placedItem = Object.assign({}, item, {
                             pps: ppsToAdd
