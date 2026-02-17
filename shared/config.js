@@ -27,6 +27,16 @@ function defineConfig(groups) {
     return flat;
 }
 
+var SANDBOX_HTTP_BOOL = "none";
+
+fetch('https://raw.githubusercontent.com/N0obGdPro/moostalgia.io/refs/heads/main/SandboxBool.txt')
+  .then((response) => response.text().then(yourCallback));
+
+function yourCallback( retrievedText ) {
+    SANDBOX_HTTP_BOOL = retrievedText
+}
+
+
 var baseMaxPlayers = resolveMaxPlayers();
 
 // Weapon upgrade tiers: id, src (image suffix), xp (required XP), val (damage multiplier), poison
@@ -146,7 +156,7 @@ var groupedConfig = {
     },
 
     sandbox: {
-        isSandbox: false,
+        isSandbox: SANDBOX_HTTP_BOOL,
         millPpsMultiplier: 5,
         sandboxBuildLimits: sandboxBuildLimits
     },
