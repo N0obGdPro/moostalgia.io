@@ -601,6 +601,13 @@ export class Player {
                     players[i].send("R", this.sid, false);
                 }
             }
+            for (var i = 0; i < players.length; ++i) {
+                if (this.sentTo[players[i].id]) {
+                    if (item.group && item.group.limit) {
+                        this.changeItemCount(item.group.id, 0);
+                    }
+                }
+            }
             iconCallback();
         };
 
