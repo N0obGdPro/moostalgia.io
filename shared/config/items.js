@@ -717,7 +717,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: -5
 }, {
-    age: 7,
+    age: 6,
     pre: 6,
     group: module.exports.groups[1],
     name: "rock wall",
@@ -728,7 +728,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: -5
 }, {
-    age: 12,
+    age: 7,
     pre: 26,
     group: module.exports.groups[1],
     name: "boulder wall",
