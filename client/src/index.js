@@ -334,6 +334,9 @@ var youtuberList = [{
 }, {
     name: "ilyax",
     link: "https://www.youtube.com/@ilyax4"
+}, {
+    name: "Dr-Abdo",
+    link: "https://www.youtube.com/@Dr-Abdo123"
 }
 ];
 
@@ -2498,21 +2501,21 @@ function renderTool(obj, variant, x, y, ctxt, size) {
         colorvar4 = "#939393";
     } else if (variant == "_d") {
         //console.log("Equipping Diamond Weapon");
-        colorvar = "#749589";
-        colorvar2 = "#749589";
-        colorvar3 = "#749589";
+        colorvar = "#6D92CD";
+        colorvar2 = "#6D92CD";
+        colorvar3 = "#6D92CD";
         colorvar4 = "#535353";
     } else if (variant == "_r") {
         //console.log("Equipping Ruby Weapon");
-        colorvar = "#807AC4";
-        colorvar2 = "#807AC4";
-        colorvar3 = "#807AC4";
+        colorvar = "#BE5555";
+        colorvar2 = "#BE5555";
+        colorvar3 = "#BE5555";
         colorvar4 = "#535353";
     } else if (variant == "_e") {
         //console.log("Equipping Emerald Weapon");
-        colorvar = "#7B935D";
-        colorvar2 = "#7B935D";
-        colorvar3 = "#7B935D";
+        colorvar = "#8CEB8F";
+        colorvar2 = "#8CEB8F";
+        colorvar3 = "#8CEB8F";
         colorvar4 = "#535353";
     }
 
