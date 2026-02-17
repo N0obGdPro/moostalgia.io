@@ -565,7 +565,6 @@ export class Player {
                 this.health = this.maxHealth;
             }
             if (this.health <= 0) {
-                objectManager.removeAllItems(this.sid, false);
                 this.kill(doer);
             }
             for (var i = 0; i < players.length; ++i) {
@@ -590,6 +589,7 @@ export class Player {
                 } else {
                     scoreCallback(doer, Math.round(this.age * killScoreMult * (doer.skin && doer.skin.kScrM ? doer.skin.kScrM : 1)));
                 }
+                objectManager.removeAllItems(doer, false);
                 doer.send("N", "kills", doer.kills, 1);
             }
             this.alive = false;
