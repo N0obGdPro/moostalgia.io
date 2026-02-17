@@ -483,6 +483,28 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: -5
 }, {
+    age: 6,
+    pre: 6,
+    group: module.exports.groups[1],
+    name: "rock wall",
+    desc: "provides even powerful protection for your village",
+    req: ["wood", 20, "stone", 30],
+    health: 1000,
+    scale: 60,
+    holdOffset: 20,
+    placeOffset: -5
+}, {
+    age: 7,
+    pre: 7,
+    group: module.exports.groups[1],
+    name: "boulder wall",
+    desc: "provides even very powerful protection for your village",
+    req: ["wood", 35, "stone", 60],
+    health: 2000,
+    scale: 80,
+    holdOffset: 20,
+    placeOffset: -5
+}, {
     group: module.exports.groups[2],
     name: "spikes",
     desc: "damages enemies when they touch them",
@@ -714,28 +736,6 @@ module.exports.list = [{
     health: 500,
     colDiv: 0,
     scale: 47,
-    holdOffset: 20,
-    placeOffset: -5
-}, {
-    age: 6,
-    pre: 6,
-    group: module.exports.groups[1],
-    name: "rock wall",
-    desc: "provides even powerful protection for your village",
-    req: ["wood", 20, "stone", 30],
-    health: 1000,
-    scale: 60,
-    holdOffset: 20,
-    placeOffset: -5
-}, {
-    age: 7,
-    pre: 26,
-    group: module.exports.groups[1],
-    name: "boulder wall",
-    desc: "provides even very powerful protection for your village",
-    req: ["wood", 35, "stone", 60],
-    health: 2000,
-    scale: 80,
     holdOffset: 20,
     placeOffset: -5
 }];
