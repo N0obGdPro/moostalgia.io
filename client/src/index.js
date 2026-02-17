@@ -1286,7 +1286,7 @@ function prepareUI() {
 
 
 
-    //if (items.weapons[i].src == "hammer_1" || items.weapons[i].src == "axe_1" || items.weapons[i].src == "sword_1" || items.weapons[i].src == "stick_1") {
+    if (items.weapons[i].src == "hammer_1" || items.weapons[i].src == "axe_1" || items.weapons[i].src == "sword_1") {
         tmpContext.lineWidth = 3;
         tmpContext.translate(5, -9); // ORG: -10, 5
         tmpContext.rotate(2.05 * Math.PI); // ORG: 1.3 * Math.PI
@@ -1298,9 +1298,9 @@ function prepareUI() {
         document.getElementById("actionBarItem" + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")"; // old
         // new document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
 
-    //} else {
-    //    tmpSprite.src = ".././img/weapons/" + items.weapons[i].src + ".png";
-    //}
+    } else {
+        tmpSprite.src = ".././img/weapons/" + items.weapons[i].src + ".png";
+    }
 
 
 
@@ -2483,12 +2483,12 @@ function renderTail(index, ctxt, owner) {
 
 var toolSprites = {};
 
-function renderTool(obj, variant, x, y, ctxt) {
+function renderTool(obj, variant, x, y, ctxt, size) {
     var a = obj;
     var c = ctxt;
     var b = x;
     var d = y;
-    var e = 1;
+    var e = e ? .35 : (size || 1);
 
     var colorvar = "#939393";
     var colorvar2 = "#9e7543";
