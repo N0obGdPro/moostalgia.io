@@ -2141,8 +2141,8 @@ function updateGame() {
                             mainContext.textAlign = "center";
                             mainContext.lineWidth = (tmpObj.nameScale?11:8);
                             mainContext.lineJoin = "round";
-                            mainContext.strokeText("[" + teamname + "]", tmpObj.x - a_legacy, tmpObj.y - d_legacy - tmpObj.scale - config.nameY - 38);
-                            mainContext.fillText("[" + teamname + "]", tmpObj.x - a_legacy, tmpObj.y - d_legacy - tmpObj.scale - config.nameY - 38);
+                            mainContext.strokeText("[" + tmpObj.team + "]", tmpObj.x - a_legacy, tmpObj.y - d_legacy - tmpObj.scale - config.nameY - 38);
+                            mainContext.fillText("[" + tmpObj.team + "]", tmpObj.x - a_legacy, tmpObj.y - d_legacy - tmpObj.scale - config.nameY - 38);
 
                         }
                         
