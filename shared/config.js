@@ -75,7 +75,7 @@ var defaultStartItems = [0, 3, 6, 10, 13];  // Item IDs players spawn with
 var defaultStartWeapons = [0];  // Weapon IDs players spawn with
 var startResources = {
     normal: 0,    // Starting score/points
-    moofoll: 100    // Starting moofoll currency
+    moofoll: 250    // Starting moofoll currency
 };
 
 // Sandbox mode building limits
