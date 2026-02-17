@@ -16,7 +16,7 @@ module.exports = function (id, sid, config, UTILS, projectileManager,
     this.tailIndex = 0;
     this.hitTime = 0;
     this.tails = {};
-    /for (var i = 0; i < accessories.length; ++i) {
+    for (var i = 0; i < accessories.length; ++i) {
         if (accessories[i].price <= 0)
             this.tails[accessories[i].id] = 1;
     }
