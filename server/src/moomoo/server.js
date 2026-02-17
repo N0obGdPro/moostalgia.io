@@ -212,9 +212,9 @@ export class Game {
                     if (target.sid === player.sid) {
                         return false;
                     }
-                    if (config.isSandbox) {
-                        return true;
-                    }
+                    //if (config.isSandbox) {
+                    //    return true;
+                    //}
                     if (player.team && target.team !== player.team) {
                         return false;
                     }
