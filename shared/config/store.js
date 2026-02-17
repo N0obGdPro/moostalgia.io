@@ -28,7 +28,7 @@ module.exports.hats = [{
 }, {
     id: 29,
     name: "Pig Head",
-    atkSpd: 0.78,
+    atkSpd: 0,
     price: 0,
     scale: 120,
     desc: "HOLY MOO FASTEST"
@@ -55,7 +55,7 @@ module.exports.hats = [{
     desc: "no effect"
 }, {
     id: 38,
-    name: "ShinZy",
+    name: "ShinZy Helmet",
     price: 0,
     scale: 240,
     desc: "fr."
@@ -75,15 +75,15 @@ module.exports.hats = [{
     desc: "no effect"
 }, {
     id: 42,
-    name: "10th Anniversary Cake",
+    name: "10th Big Cake",
     price: 0,
     scale: 480,
-    desc: "Happy M10Moo.io birthday community cosmetic!"
+    desc: "Happy M10Moo.io Anniversary community cosmetic!"
 }, {
     id: 43,
-    name: "NoobGdPro Top Hat",
+    name: "N.G.P. Top Hat",
     price: 0,
-    scale: 480,
+    scale: 240,
     desc: "hello world! ;)"
 }, {
     id: 49,
@@ -99,6 +99,12 @@ module.exports.hats = [{
     price: 50,
     scale: 120,
     desc: "Seasonal pumpkin cosmetic."
+}, {
+    id: 18,
+    name: "Explorer Hat",
+    price: 100,
+    scale: 120,
+    desc: "no effect"
 }, {
     id: 8,
     name: "Bummle Hat",
@@ -130,12 +136,6 @@ module.exports.hats = [{
     scale: 120,
     desc: "no effect"
 }, {
-    id: 18,
-    name: "Explorer Hat",
-    price: 100,
-    scale: 120,
-    desc: "no effect"
-}, {
     id: 31,
     name: "Flipper Hat",
     dontSell: true,
@@ -149,6 +149,13 @@ module.exports.hats = [{
     price: 3000,
     scale: 120,
     desc: "no effect",
+}, {
+    id: 50,
+    name: "Honeycrisp Hat",
+    price: 5000,
+    scale: 120,
+    desc: "slowly regenerates health over time",
+    healthRegen: 3
 }, {
     id: 10,
     name: "Bush Gear",
