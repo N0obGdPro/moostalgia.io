@@ -6,7 +6,7 @@ module.exports.groups = [{
     id: 1,
     name: "walls",
     place: true,
-    limit: 30,
+    limit: 40,
     layer: 0
 }, {
     id: 2,
@@ -467,7 +467,7 @@ module.exports.list = [{
     name: "stone wall",
     desc: "provides improved protection for your village",
     req: ["stone", 25],
-    health: 700,
+    health: 500,
     scale: 47,
     holdOffset: 20,
     placeOffset: -5
@@ -478,8 +478,30 @@ module.exports.list = [{
     name: "castle wall",
     desc: "provides powerful protection for your village",
     req: ["wood", 10, "stone", 20],
-    health: 1000,
+    health: 700,
     scale: 48,
+    holdOffset: 20,
+    placeOffset: -5
+}, {
+    age: 7,
+    pre: 1,
+    group: module.exports.groups[1],
+    name: "rock wall",
+    desc: "provides even powerful protection for your village",
+    req: ["wood", 20, "stone", 30],
+    health: 1000,
+    scale: 60,
+    holdOffset: 20,
+    placeOffset: -5
+}, {
+    age: 12,
+    pre: 1,
+    group: module.exports.groups[1],
+    name: "boulder wall",
+    desc: "provides even very powerful protection for your village",
+    req: ["wood", 35, "stone", 60],
+    health: 2000,
+    scale: 80,
     holdOffset: 20,
     placeOffset: -5
 }, {
