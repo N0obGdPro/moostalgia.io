@@ -596,6 +596,11 @@ export class Player {
             this.alive = false;
             this.send("P");
             this.send("R");
+            for (var i = 0; i < players.length; ++i) {
+                if (this.sentTo[players[i].id]) {
+                    players[i].send("R", this.sid, false);
+                }
+            }
             iconCallback();
         };
 
