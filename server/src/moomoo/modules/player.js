@@ -589,25 +589,25 @@ export class Player {
                 } else {
                     scoreCallback(doer, Math.round(this.age * killScoreMult * (doer.skin && doer.skin.kScrM ? doer.skin.kScrM : 1)));
                 }
-                var serverv = (this.server)?this.server:false
-                objectManager.removeAllItems(this.sid, serverv);
+                //var serverv = (this.server)?this.server:false
+                //objectManager.removeAllItems(this.sid, serverv);
                 doer.send("N", "kills", doer.kills, 1);
             }
             this.alive = false;
             this.send("P");
-            this.send("R");
-            for (var i = 0; i < players.length; ++i) {
-                if (this.sentTo[players[i].id]) {
-                    players[i].send("R", this.sid, false);
-                }
-            }
-            for (var i = 0; i < players.length; ++i) {
-                if (this.sentTo[players[i].id]) {
-                    if (item.group && item.group.limit) {
-                        this.changeItemCount(item.group.id, 0);
-                    }
-                }
-            }
+            //this.send("R");
+            //for (var i = 0; i < players.length; ++i) {
+            //    if (this.sentTo[players[i].id]) {
+            //        players[i].send("R", this.sid, false);
+            //    }
+            //}
+            //for (var i = 0; i < players.length; ++i) {
+            //    if (this.sentTo[players[i].id]) {
+            //        if (item.group && item.group.limit) {
+            //            this.changeItemCount(item.group.id, 0);
+            //        }
+            //    }
+            //}
             iconCallback();
         };
 
