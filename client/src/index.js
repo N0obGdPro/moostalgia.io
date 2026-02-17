@@ -2589,7 +2589,7 @@ function getResSprite(obj) {
         if (obj.type == 0) {
             var tmpScale;
             for (var i = 0; i < 2; ++i) {
-                tmpScale = tmpObj.scale * (!i ? 0.45 : 1);
+                tmpScale = tmpObj.scale * (!i ? 1 : 0.45);
                 renderStar(tmpContext, 7, tmpScale, tmpScale * 0.7);
                 tmpContext.fillStyle = !biomeID ? (!i ? "#9ebf57" : "#b4db62") : (!i ? "#e3f1f4" : "#fff");
                 tmpContext.fill();
