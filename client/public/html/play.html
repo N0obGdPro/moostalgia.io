@@ -97,9 +97,16 @@
                 <div id="gameName">Moostalgia.io</div>
                 <div id="loadingText">Loading...</div>
                 <div id="menuCardHolder" style="display:none">
-                    <!-- <div class="menuCard adMenuCard" style="max-width:300px;max-height:250px" id="adCard" hidden>
-                        <div id="moomoo-io_300x250" align="center" class="adsbygoogle" style="display:inline-block;width:300px;height:250px"></div>
-                    </div> -->
+                    <div class="menuCard" id="adCard">
+					<ins class="adsbygoogle"
+					     style="display:inline-block;width:300px;height:250px"
+					     data-ad-client="ca-pub-4505182558467475"
+					     data-ad-slot="4965955347"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+					<div id="cdm-zone-02"></div>
+				</div>
                     <div style="display:inline-block">
                         <div class="menuCard" id="setupCard">
                             <input id="nameInput" placeholder="Enter Name" maxlength="15">
@@ -110,17 +117,18 @@
                             </div>
                         </div>
                         <div id="promoImgHolder" class="menuCard" style="display:block;margin-top:16px;padding-bottom:12px" id="setupCard">
-                            <a href="https://www.youtube.com/@NoobGdPro" target="_blank"><img id="promoImg" src="https://i.imgur.com/BF0gGo9.png" style="width:300px;cursor:pointer"></a>
+                            <a href="https://www.youtube.com/@NoobGdPro" target="_blank"><img id="promoImg" src="https://raw.githubusercontent.com/N0obGdPro/moostalgia.io/refs/heads/main/client/public/img/promotion/banner_1.png" style="width:300px;cursor:pointer"></a>
                         </div>
                     </div>
                     <div id="rightCardHolder">
                         <div class="menuCard" id="guideCard">
-                            <div class="menuHeader" hidden>Servers</div>
-                            <div id="serverBrowser" hidden></div>
-                            <div id="altServer" hidden></div>
-                            <div class="menuHeader" style="margin-top:10px">Select Color</div>
+                            <div class="menuHeader">Servers</div>
+                            <select id="serverSelect"></select>
+                            <div id="serverBrowser"></div>
+                            <div id="altServer"></div>
+                            <div class="menuHeader">Select Color</div>
                             <div id="skinColorHolder"></div>
-                            <div class="menuHeader" style="margin-top:10px">How To Play</div>
+                            <div class="menuHeader">How To Play</div>
                             <div class="menuText">Collect resources around the map to build a village. Your Windmills generate gold over time. But make sure to protect them from other players.</div>
                             <div class="menuHeader">Controls</div>
                             <div id="desktopInstructions" class="menuText">
@@ -131,7 +139,9 @@
                                 Select Item: 1-9 or Click<br/>
                                 Quick Select Food: Q<br/>
                                 Lock Rotation: X<br/>
+							    Ping Minimap: R or click map<br/>
                                 Chat: Enter Key<br/>
+                                Close Windows: ESC
                             </div>
                             <div id="mobileInstructions" class="menuText">
                                 Movement: Drag on left side of screen<br/>
@@ -144,8 +154,8 @@
                                     Collect as many resources as you can before building your village.<br/><br/>
                                     Stay close to your village so you can protect it at all times.
                                 </div>
-                            <div class="menuHeader" hidden>Settings</div>
-                            <div class="settingRadio" hidden>
+                            <div class="menuHeader">Settings</div>
+                            <div class="settingRadio">
                                 <input id="nativeResolution" type="checkbox"/>Use Native Resolution
                             </div>
                             <div class="settingRadio" hidden>
@@ -153,6 +163,10 @@
                             </div>
                         </div>
                     </div>
+                    <div id="downloadButtonContainer" class="menuCard">
+						<a class="downloadBadge" href="https://web.archive.org/web/20170614160216/https://itunes.apple.com/us/app/moomoo-io-mobile/id1236581367?ls=1&amp;mt=8" target="_blank"><img src="/web/20170614160216im_/http://moomoo.io/img/badges/ios.svg"></a>
+						<a class="downloadBadge" href="https://web.archive.org/web/20170614160216/https://play.google.com/store/apps/details?id=com.yendis.moomoo_mobile" target="_blank"><img src="/web/20170614160216im_/http://moomoo.io/img/badges/android.png"></a>
+					</div>
                 </div>
                 <!-- <div id="wideAdCard" class="menuCard adMenuCard" style="max-width:728px;max-height:90px;display:inline-block;margin-top:10px" hidden>
                     <div id="moomoo-io_728x90" align="center" class="adsbygoogle" style="display:inline-block;width:728px;height:90px"></div>
@@ -176,7 +190,7 @@
     
             <div id="linksContainer2" class="legacyHidden">
                 <a href="./docs/versions.txt" target="_blank"
-                    class="menuLink">v0.10</a>
+                    class="menuLink">v0.11</a>
                 | <a href="https://discord.gg/fx7zzyqp" target="_blank" class="menuLink">Discord</a>
                 | <a href="https://www.youtube.com/@NoobGdPro" target="_blank" class="menuLink">Subscribe</a>
                 | <a href="https://sites.google.com/view/noobgdpro/games" target="_blank" class="menuLink">More Games</a>
