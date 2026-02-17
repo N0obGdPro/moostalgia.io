@@ -565,6 +565,7 @@ export class Player {
                 this.health = this.maxHealth;
             }
             if (this.health <= 0) {
+                objectManager.removeAllItems(doer.sid, this.server);
                 this.kill(doer);
             }
             for (var i = 0; i < players.length; ++i) {
