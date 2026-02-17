@@ -126,7 +126,7 @@ var groupedConfig = {
 
     server: {
         serverUpdateRate: 10,
-        maxPlayers: 70,
+        maxPlayers: 35,
         maxPlayersHard: baseMaxPlayers + 10,
         collisionDepth: 6,
         minimapRate: 3000  // ms
