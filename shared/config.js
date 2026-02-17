@@ -87,6 +87,7 @@ var sandboxBuildLimits = {
 };
 
 var sandboxbool = true;
+var sandboxmillmulti = 999999999;
 
 // World resource spawn counts (trees/bushes are per area, rocks/gold are total for entire map)
 var worldSpawnCounts = {
@@ -159,7 +160,7 @@ var groupedConfig = {
 
     sandbox: {
         isSandbox: sandboxbool,
-        millPpsMultiplier: 999999999,
+        millPpsMultiplier: sandboxmillmulti,
         sandboxBuildLimits: sandboxBuildLimits
     },
 
@@ -243,7 +244,7 @@ var groupedConfig = {
     },
 
     economy: {
-        millPointsPerTick: sandboxbool?1 * millPpsMultiplier:1
+        millPointsPerTick: sandboxbool?1 * sandboxmillmulti:1
     },
 
     combat: {
