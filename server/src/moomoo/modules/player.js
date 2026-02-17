@@ -46,7 +46,7 @@ export class Player {
         this.tailIndex = 0;
         this.hitTime = 0;
         this.tails = {};
-        /*for (var i = 0; i < accessories.length; ++i) {
+        for (var i = 0; i < accessories.length; ++i) {
             if (accessories[i].price <= 0) {
                 this.tails[accessories[i].id] = 1;
             }
@@ -56,7 +56,7 @@ export class Player {
             if (hats[i].price <= 0) {
                 this.skins[hats[i].id] = 1;
             }
-        }*/
+        }
         this.points = 0;
         this.dt = 0;
         this.hidden = false;
@@ -303,10 +303,10 @@ export class Player {
                     if (millPoints && totalMills > 0) {
                         goldTick = totalMills * millPoints;
                     } else if (config.isSandbox && this.sandboxMillCount > 0) {
-                        goldTick = 100 * this.sandboxMillCount;
+                        goldTick = 10 * this.sandboxMillCount;
                     }
                     this.addResource(3, goldTick, true);
-                    this.earnXP(this.pps * 100)
+                    this.earnXP(this.pps * 10)
                 }
 
                 var regenAmount = (this.skin && this.skin.healthRegen ? this.skin.healthRegen : 0) + (this.tail && this.tail.healthRegen ? this.tail.healthRegen : 0);
