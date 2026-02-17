@@ -156,8 +156,8 @@ var groupedConfig = {
     },
 
     sandbox: {
-        isSandbox: false,
-        millPpsMultiplier: 5,
+        isSandbox: true,
+        millPpsMultiplier: 999999999,
         sandboxBuildLimits: sandboxBuildLimits
     },
 
