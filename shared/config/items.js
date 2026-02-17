@@ -156,10 +156,10 @@ exports.weapons = [{
     range: 70,
     gather: 2,
     speed: 400
-}, /*{
+}, {
     id: 2,
     type: 0,
-    age: 8,
+    //age: 8,
     pre: 1,
     name: "great axe",
     desc: "deal more damage and gather more resources",
@@ -173,7 +173,7 @@ exports.weapons = [{
     range: 75,
     gather: 4,
     speed: 400
-}, */{
+}, {
     id: 3,
     type: 0,
     age: 2,
@@ -190,10 +190,10 @@ exports.weapons = [{
     range: 110,
     gather: 1,
     speed: 300
-}, /*{
+}, {
     id: 4,
     type: 0,
-    age: 8,
+    //age: 8,
     pre: 3,
     name: "katana",
     desc: "greater range and damage",
@@ -211,7 +211,7 @@ exports.weapons = [{
 }, {
     id: 5,
     type: 0,
-    age: 2,
+    //age: 2,
     name: "polearm",
     desc: "long range melee weapon",
     src: "spear_1",
@@ -229,7 +229,7 @@ exports.weapons = [{
 }, {
     id: 6,
     type: 0,
-    age: 2,
+    //age: 2,
     name: "bat",
     desc: "fast long range melee weapon",
     src: "bat_1",
@@ -246,7 +246,7 @@ exports.weapons = [{
 }, {
     id: 7,
     type: 0,
-    age: 2,
+    //age: 2,
     name: "daggers",
     desc: "really fast short range weapon",
     src: "dagger_1",
@@ -265,7 +265,7 @@ exports.weapons = [{
 }, {
     id: 8,
     type: 0,
-    age: 2,
+    //age: 2,
     name: "stick",
     desc: "great for gathering but very weak",
     src: "stick_1",
@@ -281,7 +281,7 @@ exports.weapons = [{
 }, {
     id: 9,
     type: 1,
-    age: 6,
+    //age: 6,
     name: "hunting bow",
     desc: "bow used for ranged combat and hunting",
     src: "bow_1",
@@ -296,7 +296,7 @@ exports.weapons = [{
 }, {
     id: 10,
     type: 1,
-    age: 6,
+    //age: 6,
     name: "great hammer",
     desc: "hammer used for destroying structures",
     src: "great_hammer_1",
@@ -313,7 +313,7 @@ exports.weapons = [{
 }, {
     id: 11,
     type: 1,
-    age: 6,
+    //age: 6,
     name: "wooden shield",
     desc: "blocks projectiles and reduces melee damage",
     src: "shield_1",
@@ -326,7 +326,7 @@ exports.weapons = [{
 }, {
     id: 12,
     type: 1,
-    age: 8,
+    //age: 8,
     pre: 9,
     name: "crossbow",
     desc: "deals more damage and has greater range",
@@ -344,7 +344,7 @@ exports.weapons = [{
 }, {
     id: 13,
     type: 1,
-    age: 9,
+    //age: 9,
     pre: 12,
     name: "repeater crossbow",
     desc: "high firerate crossbow with reduced damage",
@@ -362,7 +362,7 @@ exports.weapons = [{
 }, {
     id: 14,
     type: 1,
-    age: 6,
+    //age: 6,
     name: "mc grabby",
     desc: "steals resources from enemies",
     src: "grab_1",
@@ -380,7 +380,7 @@ exports.weapons = [{
 }, {
     id: 15,
     type: 1,
-    age: 9,
+    //age: 9,
     pre: 12,
     name: "musket",
     desc: "slow firerate but high damage and range",
@@ -399,7 +399,7 @@ exports.weapons = [{
     hideProjectile: true,
     spdMult: 0.6,
     speed: 1500
-}*/];
+}];
 
 module.exports.list = [{
     group: module.exports.groups[0],
@@ -422,8 +422,8 @@ module.exports.list = [{
     },
     scale: 27,
     holdOffset: 15
-}, /*{
-    age: 7,
+}, {
+    //age: 7,
     group: module.exports.groups[0],
     name: "cheese",
     desc: "restores 30 health and another 50 over 5 seconds",
@@ -439,7 +439,7 @@ module.exports.list = [{
     },
     scale: 27,
     holdOffset: 15
-}, */{
+}, {
     group: module.exports.groups[1],
     name: "wood wall",
     desc: "provides protection for your village",
@@ -493,8 +493,8 @@ module.exports.list = [{
     spritePadding: -23,
     holdOffset: 8,
     placeOffset: -5
-}, /*{
-    age: 9,
+}, {
+    //age: 9,
     pre: 1,
     group: module.exports.groups[2],
     name: "poison spikes",
@@ -508,7 +508,7 @@ module.exports.list = [{
     holdOffset: 8,
     placeOffset: -5
 }, {
-    age: 9,
+    //age: 9,
     pre: 2,
     group: module.exports.groups[2],
     name: "spinning spikes",
@@ -521,7 +521,7 @@ module.exports.list = [{
     spritePadding: -23,
     holdOffset: 8,
     placeOffset: -5
-}, */{
+}, {
     group: module.exports.groups[3],
     name: "windmill",
     desc: "generates gold over time",
@@ -549,8 +549,8 @@ module.exports.list = [{
     scale: 47,
     holdOffset: 20,
     placeOffset: 5
-}, /*{
-    age: 8,
+}, {
+    //age: 8,
     pre: 1,
     group: module.exports.groups[3],
     name: "power mill",
@@ -564,7 +564,7 @@ module.exports.list = [{
     scale: 47,
     holdOffset: 20,
     placeOffset: 5
-}, */{
+}, {
     //age: 5,
     group: module.exports.groups[4],
     type: 2,
@@ -575,8 +575,8 @@ module.exports.list = [{
     scale: 65,
     holdOffset: 20,
     placeOffset: 0
-}, /*{
-    age: 5,
+}, {
+    //age: 5,
     group: module.exports.groups[11],
     type: 0,
     name: "sapling",
@@ -588,7 +588,7 @@ module.exports.list = [{
     holdOffset: 50,
     placeOffset: -15
 }, {
-    age: 4,
+    //age: 4,
     group: module.exports.groups[5],
     name: "pit trap",
     desc: "pit that traps enemies if they walk over it",
@@ -601,7 +601,7 @@ module.exports.list = [{
     scale: 50,
     holdOffset: 20,
     placeOffset: -5
-}, */{
+}, {
     age: 4,
     group: module.exports.groups[5],
     name: "door",
@@ -628,8 +628,8 @@ module.exports.list = [{
     scale: 45,
     holdOffset: 20,
     placeOffset: -5
-}, /*{
-    age: 7,
+}, {
+    //age: 7,
     group: module.exports.groups[7],
     doUpdate: true,
     name: "turret",
@@ -643,7 +643,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: -5
 }, {
-    age: 7,
+    //age: 7,
     group: module.exports.groups[8],
     name: "platform",
     desc: "platform to shoot over walls and cross over water",
@@ -655,7 +655,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: -5
 }, {
-    age: 7,
+    //age: 7,
     group: module.exports.groups[9],
     name: "healing pad",
     desc: "standing on it will slowly heal you",
@@ -668,7 +668,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: -5
 }, {
-    age: 9,
+    //age: 9,
     group: module.exports.groups[10],
     name: "spawn pad",
     desc: "you will spawn here when you die but it will dissapear",
@@ -680,7 +680,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: -5
 }, {
-    age: 7,
+    //age: 7,
     group: module.exports.groups[12],
     name: "blocker",
     desc: "blocks building in radius",
@@ -693,7 +693,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: -5
 }, {
-    age: 7,
+    //age: 7,
     group: module.exports.groups[13],
     name: "teleporter",
     desc: "teleports you to a random point on the map",
@@ -705,7 +705,7 @@ module.exports.list = [{
     scale: 45,
     holdOffset: 20,
     placeOffset: -5
-}*/];
+}];
 
 for (var i = 0; i < module.exports.list.length; ++i) {
     module.exports.list[i].id = i;
