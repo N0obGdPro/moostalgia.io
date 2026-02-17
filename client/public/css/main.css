@@ -627,6 +627,7 @@ span {
 }
 
 #actionBar {
+    position: absolute;
 	bottom: 17px;
 	width: 100%;
 	text-align: center;
@@ -734,7 +735,10 @@ span {
 }
 
 #storeButton {
-	right: 330px;
+	right: auto;
+	top: auto;
+	left: 20px;
+	bottom: 160px;
 }
 
 #chatButton {
@@ -1075,12 +1079,14 @@ span {
 }
 
 #ageBarContainer {
+	position: absolute;
 	width: 100%;
 	bottom: 93px;
 	text-align: center;
 }
 
 #ageText {
+	position: absolute;
 	width: 100%;
 	bottom: 118px;
 	text-align: center;
@@ -1620,8 +1626,8 @@ span {
 }
 
 #bottomContainer {
-	position: absolute;
+	/* position: absolute;
 	bottom: 0;
 	left: 0;
-	right: 0;
+	right: 0; */
 }
