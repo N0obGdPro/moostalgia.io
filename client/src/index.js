@@ -2933,13 +2933,13 @@ function prepareMenuBackground() {
     objectManager.add(3, tmpMid - 950, tmpMid - 130, 0, config.treeScales[2], 0);
     objectManager.add(4, tmpMid - 750, tmpMid - 400, 0, config.treeScales[3], 0);
     objectManager.add(5, tmpMid - 700, tmpMid + 400, 0, config.treeScales[2], 0);
-    objectManager.add(6, tmpMid + 800, tmpMid - 200, 0, config.treeScales[3], 0);
-    objectManager.add(7, tmpMid - 260, tmpMid + 340, 0, config.bushScales[3], 1);
-    objectManager.add(8, tmpMid + 760, tmpMid + 310, 0, config.bushScales[3], 1);
-    objectManager.add(9, tmpMid - 800, tmpMid + 100, 0, config.bushScales[3], 1);
-    objectManager.add(10, tmpMid - 800, tmpMid + 300, 0, items.list[4].scale, items.list[4].id, items.list[10]);
-    objectManager.add(11, tmpMid + 650, tmpMid - 390, 0, items.list[4].scale, items.list[4].id, items.list[10]);
-    objectManager.add(12, tmpMid - 400, tmpMid - 450, 0, config.rockScales[2], 2);
+    objectManager.add(8, tmpMid + 800, tmpMid - 200, 0, config.treeScales[3], 0);
+    objectManager.add(9, tmpMid - 260, tmpMid + 340, 0, config.bushScales[3], 1);
+    objectManager.add(10, tmpMid + 760, tmpMid + 310, 0, config.bushScales[3], 1);
+    objectManager.add(11, tmpMid - 800, tmpMid + 100, 0, config.bushScales[3], 1);
+    objectManager.add(12, tmpMid - 800, tmpMid + 300, 0, items.list[4].scale, items.list[4].id, items.list[10]);
+    objectManager.add(13, tmpMid + 650, tmpMid - 390, 0, items.list[4].scale, items.list[4].id, items.list[10]);
+    objectManager.add(15, tmpMid - 400, tmpMid - 450, 0, config.rockScales[2], 2);
 }
 
 function loadGameObject(data) {
