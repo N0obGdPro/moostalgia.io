@@ -16,15 +16,15 @@ module.exports = function (id, sid, config, UTILS, projectileManager,
     this.tailIndex = 0;
     this.hitTime = 0;
     this.tails = {};
-    for (var i = 0; i < accessories.length; ++i) {
+    /*for (var i = 0; i < accessories.length; ++i) {
         if (accessories[i].price <= 0)
             this.tails[accessories[i].id] = 1;
-    }
+    }*/
     this.skins = {};
-    for (var i = 0; i < hats.length; ++i) {
+    /*for (var i = 0; i < hats.length; ++i) {
         if (hats[i].price <= 0)
             this.skins[hats[i].id] = 1;
-    }
+    }*/
     this.points = 0;
     this.dt = 0;
     this.hidden = false;
