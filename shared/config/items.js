@@ -80,7 +80,13 @@ module.exports.groups = [{
     place: true,
     limit: 2,
     layer: -1
-}];
+}, {
+    id: 14,
+    name: "door",
+    place: true,
+    limit: 2,
+    layer: 0
+},];
 
 exports.projectiles = [{
     indx: 0,
@@ -604,7 +610,7 @@ module.exports.list = [{
     placeOffset: -5
 }, {
     age: 4,
-    group: module.exports.groups[5],
+    group: module.exports.groups[14],
     name: "door",
     desc: "allows team mates to enter your village",
     req: ["wood", 20, "stone", 5],
