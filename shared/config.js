@@ -231,7 +231,7 @@ var groupedConfig = {
     },
 
     economy: {
-        millPointsPerTick: 5000
+        millPointsPerTick: 1
     },
 
     combat: {
