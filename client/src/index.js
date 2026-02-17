@@ -1272,15 +1272,16 @@ function prepareUI() {
                 
             if (items.weapons[i].src == "hammer_1" || items.weapons[i].src == "axe_1" || items.weapons[i].src == "sword_1") {
                 tmpContext.lineWidth = 3;
-                tmpContext.translate(5, -9); // ORG: -10, 5
-                tmpContext.rotate(2.05 * Math.PI); // ORG: 1.3 * Math.PI
+                tmpContext.translate(-10, 5); // ORG: -10, 5
+                tmpContext.rotate(1.3 * Math.PI); // ORG: 1.3 * Math.PI
                 tmpContext.strokeStyle = outlineColor;
                 tmpContext.imageSmoothingEnabled = !1;
                 tmpContext.webkitImageSmoothingEnabled = !1;
                 tmpContext.mozImageSmoothingEnabled = !1;
                 renderTool(items.weapons[i], null, 0, 0, tmpContext, 0.35);
-                document.getElementById("actionBarItem" + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")"; // old
-                var tmpUnit = document.getElementById('actionBarItem' + i);
+                document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
+                    
+                    var tmpUnit = document.getElementById('actionBarItem' + i);
                 tmpUnit.onmouseover = UTILS.checkTrusted(function () {
                     showItemInfo(items.list[i - items.weapons.length]);
                 });
@@ -1288,7 +1289,6 @@ function prepareUI() {
                     selectToBuild(i - items.weapons.length);
                 });
                 UTILS.hookTouchEvents(tmpUnit);
-        // new document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
 
             } else {
                 tmpContext.rotate((Math.PI/4)+Math.PI);
@@ -1305,6 +1305,7 @@ function prepareUI() {
                     tmpContext.fillRect(-tmpCanvas.width / 2, -tmpCanvas.height / 2, tmpCanvas.width, tmpCanvas.height);
                     tmpSprite.src = ".././img/weapons/" + items.weapons[i].src + ".png";
                     document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
+                    
                     var tmpUnit = document.getElementById('actionBarItem' + i);
                 tmpUnit.onmouseover = UTILS.checkTrusted(function () {
                     showItemInfo(items.list[i - items.weapons.length]);
