@@ -158,10 +158,10 @@ exports.weapons = [{
     xOff: 3,
     yOff: 24,
     dmg: 30,
-    spdMult: 0.8,
+    spdMult: 0.9,
     range: 70,
     gather: 2,
-    speed: 400
+    speed: 300
 }, {
     id: 2,
     type: 0,
@@ -198,7 +198,7 @@ exports.weapons = [{
     xOff: -8,
     yOff: 46,
     dmg: 35,
-    spdMult: 0.9,
+    spdMult: 0.8,
     range: 95,
     gather: 1,
     speed: 300
