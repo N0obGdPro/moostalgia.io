@@ -595,7 +595,6 @@ export class Player {
             this.alive = false;
             this.send("P");
             this.send("R");
-            server.broadcast("R", this.sid);
             iconCallback();
         };
 
