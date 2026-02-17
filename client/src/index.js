@@ -320,57 +320,22 @@ function setInitData(data) {
 
 var featuredYoutuber = document.getElementById('featuredYoutube');
 var youtuberList = [{
-    name: "Corrupt X",
-    link: "https://www.youtube.com/channel/UC0UH2LfQvBSeH24bmtbmITw"
+    name: "NoobGdPro",
+    link: "https://www.youtube.com/@NoobGdPro"
 }, {
-    name: "Tweak Big",
-    link: "https://www.youtube.com/channel/UCbwvzJ38AndDTkoX8sD9YOw"
+    name: "Infinite Spectral",
+    link: "https://www.youtube.com/@InfiniteSp20-5"
 }, {
-    name: "Arena Closer",
-    link: "https://www.youtube.com/channel/UCazucVSJqW-kiHMIhQhD-QQ"
+    name: "ShinZy",
+    link: "https://www.youtube.com/@ShinZyXD"
 }, {
-    name: "Godenot",
-    link: "https://www.youtube.com/user/SirGodenot"
+    name: "Base64 Entertainment",
+    link: "https://www.youtube.com/@Base64EntertainmentTeam"
 }, {
-    name: "RajNoobTV",
-    link: "https://www.youtube.com/channel/UCVLo9brXBWrCttMaGzvm0-Q"
-}, {
-    name: "TomNotTom",
-    link: "https://www.youtube.com/channel/UC7z97RgHFJRcv2niXgArBDw"
-}, {
-    name: "Nation",
-    link: "https://www.youtube.com/channel/UCSl-MBn3qzjrIvLNESQRk-g"
-}, {
-    name: "Pidyohago",
-    link: "https://www.youtube.com/channel/UC04p8Mg8nDaDx04A9is2B8Q"
-}, {
-    name: "Enigma",
-    link: "https://www.youtube.com/channel/UC5HhLbs3sReHo8Bb9NDdFrg"
-}, {
-    name: "Bauer",
-    link: "https://www.youtube.com/channel/UCwU2TbJx3xTSlPqg-Ix3R1g"
-}, {
-    name: "iStealth",
-    link: "https://www.youtube.com/channel/UCGrvlEOsQFViZbyFDE6t69A"
-}, {
-    name: "SICKmania",
-    link: "https://www.youtube.com/channel/UCvVI98ezn4TpX5wDMZjMa3g"
-}, {
-    name: "LightThief",
-    link: "https://www.youtube.com/channel/UCj6C_tiDeATiKd3GX127XoQ"
-}, {
-    name: "Fortish",
-    link: "https://www.youtube.com/channel/UCou6CLU-szZA3Tb340TB9_Q"
-}, {
-    name: "巧克力",
-    link: "https://www.youtube.com/channel/UCgL6J6oL8F69vm-GcPScmwg"
-}, {
-    name: "i Febag",
-    link: "https://www.youtube.com/channel/UCiU6WZwiKbsnt5xmwr0OFbg"
-}, {
-    name: "GoneGaming",
-    link: "https://www.youtube.com/channel/UCOcQthRanYcwYY0XVyVeK0g"
-}];
+    name: "ilyax",
+    link: "https://www.youtube.com/@ilyax4"
+}
+];
 
 var tmpYoutuber = youtuberList[UTILS.randInt(0, youtuberList.length - 1)];
 featuredYoutuber.innerHTML = "<a target='_blank' class='ytLink' href='" + tmpYoutuber.link + "'><i class='material-icons' style='vertical-align: top;'>&#xE064;</i> " + tmpYoutuber.name + "</a>";
@@ -906,7 +871,7 @@ function showAllianceMenu() {
             } else {
                 UTILS.generateElement({
                     class: "allianceItem",
-                    text: "No Tribes Yet",
+                    text: "No Alliances Yet",
                     parent: allianceHolder
                 });
             }
@@ -916,7 +881,7 @@ function showAllianceMenu() {
             UTILS.generateElement({
                 class: "allianceButtonM",
                 style: "width: 360px",
-                text: player.isOwner ? "Delete Tribe" : "Leave Tribe",
+                text: player.isOwner ? "Delete Alliance" : "Leave Alliance",
                 onclick: function () {
                     leaveAlliance()
                 },
@@ -2153,7 +2118,7 @@ function updateGame() {
             if (tmpObj.visible) {
 
                 if (tmpObj.skinIndex != 10 || (tmpObj == player) || (tmpObj.team && tmpObj.team == player.team)) {
-                    var tmpText = (tmpObj.team ? "[" + tmpObj.team + "] " : "") + (tmpObj.name || "");
+                    var tmpText = (tmpObj.name || "");
                     if (tmpText != "") {
                         mainContext.font = (tmpObj.nameScale || 30) + "px Hammersmith One";
                         mainContext.fillStyle = "#fff";
@@ -2163,7 +2128,25 @@ function updateGame() {
                         mainContext.lineJoin = "round";
                         mainContext.strokeText(tmpText, tmpObj.x - xOffset, (tmpObj.y - yOffset - tmpObj.scale) - config.nameY);
                         mainContext.fillText(tmpText, tmpObj.x - xOffset, (tmpObj.y - yOffset - tmpObj.scale) - config.nameY);
-                        if (tmpObj.isLeader && iconSprites["crown"].isLoaded) {
+
+                        
+                        var a_legacy = camX - maxScreenWidth / 2;
+                        var d_legacy = camY - maxScreenHeight / 2;
+                        
+                         if (tmpObj.team != "") {
+                            var teamname = (tmpObj.team?"["+tmpObj.team+"] ":"");
+                            mainContext.font = (tmpObj.nameScale||30) + "px Hammersmith One";
+                            mainContext.fillStyle = (tmpObj.nameColor?tmpObj.nameColor:"#fff");
+                            mainContext.textBaseline = "middle";
+                            mainContext.textAlign = "center";
+                            mainContext.lineWidth = (tmpObj.nameScale?11:8);
+                            mainContext.lineJoin = "round";
+                            mainContext.strokeText("[" + teamname + "]", tmpObj.x - a_legacy, tmpObj.y - d_legacy - tmpObj.scale - config.nameY - 38);
+                            mainContext.fillText("[" + teamname + "]", tmpObj.x - a_legacy, tmpObj.y - d_legacy - tmpObj.scale - config.nameY - 38);
+
+                        }
+                        
+                        /*if (tmpObj.isLeader && iconSprites["crown"].isLoaded) {
                             var tmpS = config.crownIconScale;
                             var tmpX = tmpObj.x - xOffset - (tmpS / 2) - (mainContext.measureText(tmpText).width / 2) - config.crownPad;
                             mainContext.drawImage(iconSprites["crown"], tmpX, (tmpObj.y - yOffset - tmpObj.scale) -
@@ -2173,9 +2156,9 @@ function updateGame() {
                             var tmpS = config.crownIconScale;
                             var tmpX = tmpObj.x - xOffset - (tmpS / 2) + (mainContext.measureText(tmpText).width / 2) + config.crownPad;
                             mainContext.drawImage(iconSprites["skull"], tmpX, (tmpObj.y - yOffset - tmpObj.scale) - config.nameY - (tmpS / 2) - 5, tmpS, tmpS);
-                        }
+                        }*/
                     }
-                    var statsParts = [];
+                   /* var statsParts = [];
                     if (typeof tmpObj.cps === "number" && tmpObj.cps >= 0) {
                         statsParts.push(Math.max(0, Math.round(tmpObj.cps)) + " CPS");
                     }
@@ -2190,7 +2173,7 @@ function updateGame() {
                         mainContext.strokeText(statsText, tmpObj.x - xOffset, statsY);
                         mainContext.fillStyle = "#fff";
                         mainContext.fillText(statsText, tmpObj.x - xOffset, statsY);
-                    }
+                    }*/
                     if (tmpObj.health > 0) {
 
                         mainContext.fillStyle = darkOutlineColor;
