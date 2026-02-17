@@ -2721,6 +2721,14 @@ function getItemSprite(obj, asIcon) {
                 tmpContext.fill();
                 if (!i) tmpContext.stroke();
             }
+        } else if (obj.name == "door") {
+            tmpContext.fillStyle = "#a5974c";
+            renderStar(tmpContext, 3, obj.scale * 1.1, obj.scale * 1.1);
+            tmpContext.fill();
+            tmpContext.stroke();
+            tmpContext.fillStyle = outlineColor;
+            renderStar(tmpContext, 3, obj.scale * 0.65, obj.scale * 0.65);
+            tmpContext.fill();
         } else if (obj.name == "pit trap") {
             tmpContext.fillStyle = "#a5974c";
             renderStar(tmpContext, 3, obj.scale * 1.1, obj.scale * 1.1);
