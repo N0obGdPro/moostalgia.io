@@ -585,33 +585,33 @@ span {
 	text-align: right;
 	line-height: 39px;
 	padding-left: 10px;
-	padding-right: 40px;
-	background-size: 28px;
+	padding-right: 10px;
+	/*background-size: 28px;
 	background-repeat: no-repeat;
-	background-position: right 6px center;
+	background-position: right 6px center;*/
 }
 
 #foodDisplay {
-	background-image: url(../img/resources/food_ico.png);
+	/*background-image: url(../img/resources/food_ico.png);*/
 }
 
 #woodDisplay {
-	background-image: url(../img/resources/wood_ico.png);
+	/*background-image: url(../img/resources/wood_ico.png);*/
 }
 
 #stoneDisplay {
-	background-image: url(../img/resources/stone_ico.png);
+	/*background-image: url(../img/resources/stone_ico.png);*/
 }
 
 #scoreDisplay {
 	right: inherit;
-	left: 20px;
-	bottom: 160px;
+	left: 160px;
+	bottom: 20px;
 	text-align: left;
-	padding-left: 40px;
+	padding-left: 10px;
 	padding-right: 10px;
-	background-position: left 6px center;
-	background-image: url(../img/resources/gold_ico.png);
+	/*background-position: left 6px center;
+	background-image: url(../img/resources/gold_ico.png);*/
 }
 
 #stoneDisplay {
@@ -815,32 +815,30 @@ span {
 }
 
 #allianceMenu {
-	display: none;
-	width: 100%;
-	position: absolute;
-	text-align: center;
-	top: 50%;
-	transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
+    display: none;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 
 #allianceHolder {
-	pointer-events: all;
-	height: 200px;
-	max-height: calc(100vh - 260px);
-	overflow-y: hidden;
-	-webkit-overflow-scrolling: touch;
-	width: 350px;
-	display: inline-block;
-	text-align: left;
-	padding: 10px;
-	background-color: rgba(0, 0, 0, 0.25);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+    pointer-events: all;
+    max-height: 200px;
+    overflow-y: scroll;
+    width: 350px;
+    display: inline-block;
+    text-align: left;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }
 
 .allianceItem {
