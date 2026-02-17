@@ -2543,7 +2543,7 @@ function renderTool(obj, variant, x, y, ctxt) {
         ) :
 
         // SWORD
-        obj.src == "sword_1" ? (
+        obj.src == "sword_1" && (
         c.fillStyle = "#9e7543",
         c.roundRect(b - 18 * e, d - 44 * e, 16 * e, 125 * e, 5 * e),
         c.fill(),
