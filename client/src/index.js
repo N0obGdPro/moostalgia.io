@@ -2670,6 +2670,20 @@ function getItemSprite(obj, asIcon) {
                 tmpRange = UTILS.randInt(obj.scale / 2.5, obj.scale / 1.7);
                 renderCircle(tmpRange * Math.cos(rotVal * i), tmpRange * Math.sin(rotVal * i), UTILS.randInt(4, 5), tmpContext, true);
             }
+        } else if (obj.name == "pizza") {
+             tmpContext.fillStyle = "#cca861";
+             renderCircle(0, 0, obj.scale, tmpContext);
+             tmpContext.fillStyle = "#ead467";
+             renderCircle(0, 0, .7 * obj.scale, tmpContext, true)
+             var chips = 4;
+             var rotVal = mathPI2 / chips;
+             var tmpRange;
+             for (var i = 0; i < chips; ++i) {
+                 tmpContext.fillStyle = UTILS.randInt(0, 1) ? "#d86868" : "#93b253",
+                 tmpRange = UTILS.randInt(obj.scale / 2.5, obj.scale / 1.7);
+                 renderCircle(tmpRange * Math.cos(rotVal * i), tmpRange * Math.sin(rotVal * i),
+                 UTILS.randInt(4, 5), tmpContext, true);
+             }
         } else if (obj.name == "cheese") {
             tmpContext.fillStyle = "#f4f3ac";
             renderCircle(0, 0, obj.scale, tmpContext);
@@ -2681,13 +2695,13 @@ function getItemSprite(obj, asIcon) {
                 tmpRange = UTILS.randInt(obj.scale / 2.5, obj.scale / 1.7);
                 renderCircle(tmpRange * Math.cos(rotVal * i), tmpRange * Math.sin(rotVal * i), UTILS.randInt(4, 5), tmpContext, true);
             }
-        } else if (obj.name == "wood wall" || obj.name == "stone wall" || obj.name == "castle wall") {
-            tmpContext.fillStyle = (obj.name == "castle wall") ? "#83898e" : (obj.name == "wood wall") ? "#a5974c" : "#939393";
-            var sides = (obj.name == "castle wall") ? 4 : 3;
+        } else if (obj.name == "wood wall" || obj.name == "stone wall" || obj.name == "castle wall" || obj.name == "rock wall" || obj.name == "boulder wall") {
+            tmpContext.fillStyle = (obj.name == "boulder wall") ? "#626974" : (obj.name == "rock wall") ? "#787E87" : (obj.name == "castle wall") ? "#83898e" : (obj.name == "wood wall") ? "#a5974c" : "#939393";
+            var sides = (obj.name == "boulder wall") ? 6 : ((obj.name == "rock wall") ? 5 : ((obj.name == "castle wall") ? 4 : 3));
             renderStar(tmpContext, sides, obj.scale * 1.1, obj.scale * 1.1);
             tmpContext.fill();
             tmpContext.stroke();
-            tmpContext.fillStyle = (obj.name == "castle wall") ? "#9da4aa" : (obj.name == "wood wall") ? "#c9b758" : "#bcbcbc";
+            tmpContext.fillStyle = (obj.name == "boulder wall") ? "#6D7A84" : (obj.name == "rock wall") ? "#8895A1" : (obj.name == "castle wall") ? "#9da4aa" : (obj.name == "wood wall") ? "#c9b758" : "#bcbcbc";
             renderStar(tmpContext, sides, obj.scale * 0.65, obj.scale * 0.65);
             tmpContext.fill();
         } else if (obj.name == "spikes" || obj.name == "greater spikes" || obj.name == "poison spikes" ||
