@@ -20,11 +20,26 @@ module.exports.hats = [{
     desc: "no effect"
 }, {
     id: 29,
-    name: "Pig Head",
-    atkSpd: 0,
+    name: "Technoblade Head",
+    atkSpd: 0.001,
+    healthRegen: 1000,
+    dmgMult: 0,
+    poisonRes: 1,
+    extraGold: 100,
+    dmgMultO: 2,
+    spdMult: 1.3,
+    dmgK: 1,
+    poisonDmg: 15, 
+    poisonTime: 3,
+    pps: 10,
+    dmg: 2,
+    healD: 1,
+    kScrM: 2,
+    goldSteal: 1,
+    bDmg: 10,
     price: 0,
     scale: 120,
-    desc: "HOLY MOO FASTEST"
+    desc: "technoblade never dies."
 }, {
     id: 30,
     name: "Fluff Head",
