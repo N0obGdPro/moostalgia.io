@@ -718,7 +718,7 @@ module.exports.list = [{
     placeOffset: -5
 }, {
     age: 7,
-    pre: 1,
+    pre: 2,
     group: module.exports.groups[1],
     name: "rock wall",
     desc: "provides even powerful protection for your village",
@@ -729,7 +729,7 @@ module.exports.list = [{
     placeOffset: -5
 }, {
     age: 12,
-    pre: 1,
+    pre: 3,
     group: module.exports.groups[1],
     name: "boulder wall",
     desc: "provides even very powerful protection for your village",
