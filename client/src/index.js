@@ -1013,15 +1013,15 @@ function renderMinimap(delta) {
         mapContext.strokeStyle = "#fff";
         mapContext.lineWidth = 4;
         for (var i = 0; i < mapPings.length; ++i) {
-            tmpPing = mapPings[i];
-            tmpPing.update(mapContext, delta);
+            //tmpPing = mapPings[i];
+            //tmpPing.update(mapContext, delta);
         }
 
         mapContext.globalAlpha = 1;
         mapContext.fillStyle = "#fff";
         renderCircle((player.x / config.mapScale) * mapDisplay.width, (player.y / config.mapScale) * mapDisplay.height, 7, mapContext, true);
         mapContext.fillStyle = "rgba(255,255,255,0.35)";
-        if ((player.team || config.isSandbox) && minimapData) {
+        if ((player.team) && minimapData) {
             for (var i = 0; i < minimapData.length;) {
                 renderCircle((minimapData[i] / config.mapScale) * mapDisplay.width, (minimapData[i + 1] / config.mapScale) * mapDisplay.height, 7, mapContext, true);
                 i += 2;
@@ -1029,19 +1029,19 @@ function renderMinimap(delta) {
         }
 
         if (lastDeath) {
-            mapContext.fillStyle = "#fc5553";
-            mapContext.font = "34px Hammersmith One";
-            mapContext.textBaseline = "middle";
-            mapContext.textAlign = "center";
-            mapContext.fillText("x", (lastDeath.x / config.mapScale) * mapDisplay.width, (lastDeath.y / config.mapScale) * mapDisplay.height);
+            //mapContext.fillStyle = "#fc5553";
+           // mapContext.font = "34px Hammersmith One";
+            //mapContext.textBaseline = "middle";
+            //mapContext.textAlign = "center";
+            //mapContext.fillText("x", (lastDeath.x / config.mapScale) * mapDisplay.width, (lastDeath.y / config.mapScale) * mapDisplay.height);
         }
 
         if (mapMarker) {
-            mapContext.fillStyle = "#fff";
-            mapContext.font = "34px Hammersmith One";
-            mapContext.textBaseline = "middle";
-            mapContext.textAlign = "center";
-            mapContext.fillText("x", (mapMarker.x / config.mapScale) * mapDisplay.width, (mapMarker.y / config.mapScale) * mapDisplay.height);
+            //mapContext.fillStyle = "#fff";
+            //mapContext.font = "34px Hammersmith One";
+            //mapContext.textBaseline = "middle";
+            //mapContext.textAlign = "center";
+            //mapContext.fillText("x", (mapMarker.x / config.mapScale) * mapDisplay.width, (mapMarker.y / config.mapScale) * mapDisplay.height);
         }
     }
 }
@@ -1696,7 +1696,7 @@ function sendLockDir() {
 }
 
 function sendMapPing() {
-    io.send("S", 1);
+    //io.send("S", 1);
 }
 
 function sendAutoGather() {
@@ -1737,7 +1737,7 @@ function setupGame(yourSID) {
 }
 
 function showText(x, y, value, type) {
-    textManager.showText(x, y, 50, 0.18, 500, Math.abs(value), (value >= 0) ? "#fff" : "#8ecc51");
+   // textManager.showText(x, y, 50, 0.18, 500, Math.abs(value), (value >= 0) ? "#fff" : "#8ecc51");
 }
 
 var deathTextScale = 99999;
