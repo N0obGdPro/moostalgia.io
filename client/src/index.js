@@ -2937,8 +2937,8 @@ function prepareMenuBackground() {
     objectManager.add(7, tmpMid - 260, tmpMid + 340, 0, config.bushScales[3], 1);
     objectManager.add(8, tmpMid + 760, tmpMid + 310, 0, config.bushScales[3], 1);
     objectManager.add(9, tmpMid - 800, tmpMid + 100, 0, config.bushScales[3], 1);
-    objectManager.add(10, tmpMid - 800, tmpMid + 300, 0, items.list[6].scale, items.list[6].id, items.list[12]);
-    objectManager.add(11, tmpMid + 650, tmpMid - 390, 0, items.list[6].scale, items.list[6].id, items.list[12]);
+    objectManager.add(10, tmpMid - 800, tmpMid + 300, 0, items.list[4].scale, items.list[4].id, items.list[12]);
+    objectManager.add(11, tmpMid + 650, tmpMid - 390, 0, items.list[4].scale, items.list[4].id, items.list[12]);
     objectManager.add(12, tmpMid - 400, tmpMid - 450, 0, config.rockScales[2], 2);
 }
 
