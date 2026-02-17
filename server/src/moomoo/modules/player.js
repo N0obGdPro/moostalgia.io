@@ -589,11 +589,13 @@ export class Player {
                 } else {
                     scoreCallback(doer, Math.round(this.age * killScoreMult * (doer.skin && doer.skin.kScrM ? doer.skin.kScrM : 1)));
                 }
-                objectManager.removeAllItems(doer, false);
+                objectManager.removeAllItems(this.sid, server);
                 doer.send("N", "kills", doer.kills, 1);
             }
             this.alive = false;
             this.send("P");
+            this.send("R");
+            server.broadcast("R", this.sid);
             iconCallback();
         };
 
