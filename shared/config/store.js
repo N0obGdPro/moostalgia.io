@@ -183,7 +183,6 @@ module.exports.hats = [{
 }, {
     id: 23,
     name: "Anti Venom Gear",
-    dontSell: true,
     price: 4000,
     scale: 120,
     desc: "makes you immune to poison",
