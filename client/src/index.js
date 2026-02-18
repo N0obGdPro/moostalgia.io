@@ -2739,7 +2739,7 @@ function getItemSprite(obj, asIcon) {
                 if (!i) tmpContext.stroke();
             }
         } else if (obj.name == "shrub") {
-            renderBlob(tmpContext, 5, tmpObj.scale, tmpObj.scale * 0.7);
+            renderBlob(tmpContext, 5, tmpScale, tmpScale * 0.7);
                 tmpContext.fillStyle = "#89a54c";
                 tmpContext.fill();
                 tmpContext.stroke();
@@ -2748,7 +2748,7 @@ function getItemSprite(obj, asIcon) {
                 var berries = 3;
                 var rotVal = mathPI2 / berries;
                 for (var i = 0; i < berries; ++i) {
-                    tmpRange = UTILS.randInt(obj.scale / 3.5, obj.scale / 2.3);
+                    tmpRange = UTILS.randInt(tmpScale / 3.5, tmpScale / 2.3);
                     renderCircle(tmpRange * Math.cos(rotVal * i), tmpRange * Math.sin(rotVal * i), UTILS.randInt(10, 12), tmpContext);
                 }
         } else if (obj.name == "door") {
