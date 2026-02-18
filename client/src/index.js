@@ -1225,6 +1225,14 @@ function prepareUI() {
                 },
                 parent: actionBar
             });
+            var tmpUnit = document.getElementById('actionBarItem' + i);
+            tmpUnit.onmouseover = UTILS.checkTrusted(function () {
+                showItemInfo(items.weapons[i], true);
+            });
+            tmpUnit.onclick = UTILS.checkTrusted(function () {
+                selectToBuild(i, true);
+            });
+            UTILS.hookTouchEvents(tmpUnit);
         })(i);
     }
     for (var i = 0; i < (items.list.length + items.weapons.length); ++i) {
