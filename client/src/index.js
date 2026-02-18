@@ -2739,7 +2739,8 @@ function getItemSprite(obj, asIcon) {
                 if (!i) tmpContext.stroke();
             }
         } else if (obj.name == "shrub") {
-            renderBlob(tmpContext, 5, obj.scale, obj.scale * 0.7);
+            var tempobjd = obj.scale * 1.25;
+            renderBlob(tmpContext, 5, tempobjd, tempobjd * 0.7);
                 tmpContext.fillStyle = "#89a54c";
                 tmpContext.fill();
                 tmpContext.stroke();
@@ -2748,16 +2749,16 @@ function getItemSprite(obj, asIcon) {
                 var berries = 3;
                 var rotVal = mathPI2 / berries;
                 for (var i = 0; i < berries; ++i) {
-                    tmpRange = UTILS.randInt(obj.scale / 3.5, obj.scale / 2.3);
+                    tmpRange = UTILS.randInt(tempobjd / 3.5, tempobjd / 2.3);
                     renderCircle(tmpRange * Math.cos(rotVal * i), tmpRange * Math.sin(rotVal * i), UTILS.randInt(10, 12), tmpContext);
                 }
         } else if (obj.name == "yoylelite") {
             tmpContext.fillStyle = "#8C5591";
-            renderStar(tmpContext, 4.5, obj.scale, obj.scale);
+            renderStar(tmpContext, 2.5, obj.scale, obj.scale);
             tmpContext.fill();
             tmpContext.stroke();
             tmpContext.fillStyle = "#F9F466";
-            renderStar(tmpContext, 2.25, obj.scale * 0.55, obj.scale * 0.65);
+            renderStar(tmpContext, 2.5, obj.scale * 0.3, obj.scale * 0.65);
             tmpContext.fill();
         } else if (obj.name == "door") {
             tmpContext.fillStyle = "#a5974c";
