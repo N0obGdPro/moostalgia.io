@@ -219,9 +219,16 @@ module.exports.hats = [{
 }, {
     id: 10,
     name: "Bush Gear",
+    dontSell: true,
     price: 10000,
     scale: 160,
     desc: "allows you to disguise yourself as a bush"
+}, {
+    id: 10,
+    name: "Anonymous Fedora",
+    price: 10000,
+    scale: 120,
+    desc: "hides your name and health tag"
 }, {
     id: 21,
     name: "Plague Mask",
