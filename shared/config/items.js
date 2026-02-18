@@ -626,7 +626,7 @@ module.exports.list = [{
     req: ["wood", 150],
     health: 5000,
     iconLineMult: 12,
-    colDiv: 0.5,
+    //colDiv: 0.5,
     scale: 110,
     holdOffset: 50,
     placeOffset: -15
@@ -639,7 +639,7 @@ module.exports.list = [{
     req: ["food", 125, "wood", 70],
     health: 5000,
     iconLineMult: 12,
-    colDiv: 0.5,
+    //colDiv: 0.5,
     scale: 60,
     holdOffset: 50,
     placeOffset: -15
