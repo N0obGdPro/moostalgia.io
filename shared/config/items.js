@@ -612,6 +612,7 @@ module.exports.list = [{
     name: "mine",
     desc: "allows you to mine stone",
     req: ["wood", 20, "stone", 100],
+    health: 5000,
     iconLineMult: 12,
     scale: 65,
     holdOffset: 20,
@@ -623,6 +624,7 @@ module.exports.list = [{
     name: "sapling",
     desc: "allows you to farm wood",
     req: ["wood", 150],
+    health: 5000,
     iconLineMult: 12,
     colDiv: 0.5,
     scale: 110,
@@ -635,9 +637,10 @@ module.exports.list = [{
     name: "shrub",
     desc: "allows you to collect food",
     req: ["food", 125, "wood", 70],
+    health: 5000,
     iconLineMult: 12,
     colDiv: 0.5,
-    scale: 85,
+    scale: 60,
     holdOffset: 50,
     placeOffset: -15
 }, {
