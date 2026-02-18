@@ -46,7 +46,7 @@ var weaponVariants = [{
     src: "",
     xp: 0,
     val: 1
-}}];
+}];
 
 // Player spawn defaults
 var defaultStartItems = [0, 3, 8, 12];  // Item IDs players spawn with (15 is mine.)
