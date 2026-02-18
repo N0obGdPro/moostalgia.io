@@ -1292,6 +1292,7 @@ function prepareUI() {
                     selectToBuild(i - items.weapons.length);
                 });
                 UTILS.hookTouchEvents(tmpUnit);
+            }
         })(i);
     }
 
