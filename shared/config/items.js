@@ -658,7 +658,7 @@ module.exports.list = [{
     req: ["stone", 200, "points", 1000],
     //health: 5000,
     iconLineMult: 12,
-    scale: 250,
+    scale: 85,
     holdOffset: 20,
     placeOffset: 0
 }, {
