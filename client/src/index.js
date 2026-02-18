@@ -1237,7 +1237,6 @@ function prepareUI() {
             tmpContext.webkitImageSmoothingEnabled = false;
             tmpContext.mozImageSmoothingEnabled = false;
             if (items.weapons[i]) {
-                
                 if (items.weapons[i].src == "hammer_1" || items.weapons[i].src == "axe_1" || items.weapons[i].src == "sword_1") {
                     tmpContext.lineWidth = 3;
                     tmpContext.translate(-10, 5); // ORG: -10, 5
@@ -1248,7 +1247,6 @@ function prepareUI() {
                     tmpContext.mozImageSmoothingEnabled = !1;
                     renderTool(items.weapons[i], null, 0, 0, tmpContext, 0.35);
                     document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
-
                 } else {
                     tmpContext.rotate((Math.PI/4)+Math.PI);
                     var tmpSprite = new Image();
@@ -1264,22 +1262,8 @@ function prepareUI() {
                     tmpContext.fillRect(-tmpCanvas.width / 2, -tmpCanvas.height / 2, tmpCanvas.width, tmpCanvas.height);
                     tmpSprite.src = ".././img/weapons/" + items.weapons[i].src + ".png";
                     document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
-                    
-                    
-                } 
-                var tmpUnit = document.getElementById('actionBarItem' + i);
-                tmpUnit.onmouseover = UTILS.checkTrusted(function () {
-                    showItemInfo(items.weapons[i], true);
-                });
-                tmpUnit.onclick = UTILS.checkTrusted(function () {
-                    selectToBuild(i, true);
-                });
-                UTILS.hookTouchEvents(tmpUnit);
-            }
-
-
-
-
+                    }
+                }
             } else {
                 var tmpSprite = getItemSprite(items.list[i-items.weapons.length], true);
                 var tmpScale = Math.min(tmpCanvas.width - config.iconPadding, tmpSprite.width);
@@ -1292,16 +1276,15 @@ function prepareUI() {
                 tmpContext.globalCompositeOperation = "source-atop";
                 tmpContext.fillRect(-tmpScale / 2, -tmpScale / 2, tmpScale, tmpScale);
                 document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
-                
-                var tmpUnit = document.getElementById('actionBarItem' + i);
-                tmpUnit.onmouseover = UTILS.checkTrusted(function () {
-                    showItemInfo(items.weapons[i], true);
-                });
-                tmpUnit.onclick = UTILS.checkTrusted(function () {
-                    selectToBuild(i, true);
-                });
-                UTILS.hookTouchEvents(tmpUnit);
             }
+            var tmpUnit = document.getElementById('actionBarItem' + i);
+            tmpUnit.onmouseover = UTILS.checkTrusted(function () {
+                showItemInfo(items.weapons[i], true);
+            });
+            tmpUnit.onclick = UTILS.checkTrusted(function () {
+                selectToBuild(i, true);
+            });
+            UTILS.hookTouchEvents(tmpUnit);
         })(i);
     }
 
