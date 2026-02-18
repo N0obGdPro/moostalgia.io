@@ -612,7 +612,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: 5
 }, {
-    //age: 5,
+    age: 5,
     group: module.exports.groups[4],
     type: 2,
     name: "mine",
