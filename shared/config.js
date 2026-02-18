@@ -46,36 +46,14 @@ var weaponVariants = [{
     src: "",
     xp: 0,
     val: 1
-}, {
-    id: 1,
-    src: "_g",
-    xp: 3000,
-    val: 1.1
-}, {
-    id: 2,
-    src: "_d",
-    xp: 7000,
-    val: 1.18
-}, {
-    id: 3,
-    src: "_r",
-    poison: true,
-    xp: 12000,
-    val: 1.18
-}, {
-    id: 4,
-    src: "_e",
-    poison: true,
-    xp: 24000,
-    val: 1.18
-}];
+}}];
 
 // Player spawn defaults
 var defaultStartItems = [0, 3, 8, 12];  // Item IDs players spawn with (15 is mine.)
 var defaultStartWeapons = [0];  // Weapon IDs players spawn with
 var startResources = {
     normal: 0,    // Starting score/points
-    moofoll: 250    // Starting moofoll currency
+    moofoll: 0    // Starting moofoll currency
 };
 
 // Sandbox mode building limits
@@ -91,9 +69,9 @@ var sandboxmillmulti = 1000;
 
 // World resource spawn counts (trees/bushes are per area, rocks/gold are total for entire map)
 var worldSpawnCounts = {
-    treesPerArea: 15,
-    bushesPerArea: 8,
-    totalRocks: 30,
+    treesPerArea: 10,
+    bushesPerArea: 7,
+    totalRocks: 29,
     goldOres: 5
 };
 
@@ -181,7 +159,7 @@ var groupedConfig = {
     },
 
     customization: {
-        skinColors: ["#bf8f54", "#cbb091", "#896c4b", "#fadadc", "#ececec", "#c37373", "#4c4c4c", "#ecaff7", "#738cc3", "#8bc373", "#749589", "#7074A4", "#F7CF45", "#91B2DB", "#B4DB62", "#C05C39", "#FFA954", "#938D77"]
+        skinColors: ["#bf8f54"]
     },
 
     animals: {
