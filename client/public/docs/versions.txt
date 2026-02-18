@@ -2,6 +2,10 @@ Moostalgia IO - Game Version History
 
 MOOMOO 2 is for Moostalgia.io right now! ;)
 
+0.12 - (18/02/2026):
+> Changed Yoylelite to Gold Mine
+> Fixed Hovering Items for weapons
+
 0.11 - (18/02/2026):
 > Added Rock, Shoulder Walls for more powerful and bigger!
 > Added Shrub, Yoylelite, Sapling for you can farm wood, food, gold now!
