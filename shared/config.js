@@ -86,7 +86,7 @@ var sandboxBuildLimits = {
     general: 300
 };
 
-var sandboxbool = true;
+var sandboxbool = false;
 var sandboxmillmulti = 1000;
 
 // World resource spawn counts (trees/bushes are per area, rocks/gold are total for entire map)
