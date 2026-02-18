@@ -775,9 +775,9 @@ module.exports.list = [{
     req: ["wood", 20, "stone", 5],
     ignoreCollision: true,
 	ignoreFriendly: true,
-    hideFromEnemy: false,
+    //hideFromEnemy: false,
     health: 500,
-    colDiv: 0,
+    //colDiv: 0,
     scale: 47,
     holdOffset: 20,
     placeOffset: -5
