@@ -591,7 +591,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: 5
 }, {
-    //age: 8,
+    age: 8,
     pre: 1,
     group: module.exports.groups[3],
     name: "generator",
@@ -637,7 +637,7 @@ module.exports.list = [{
     req: ["food", 125, "wood", 70],
     iconLineMult: 12,
     colDiv: 0.5,
-    scale: 52,
+    scale: 85,
     holdOffset: 50,
     placeOffset: -15
 }, {
