@@ -598,7 +598,7 @@ module.exports.list = [{
     placeOffset: 5
 }, {
     age: 6,
-    pre: 15,
+    pre: 16,
     group: module.exports.groups[3],
     name: "generator",
     desc: "generates more gold over time",
@@ -653,9 +653,9 @@ module.exports.list = [{
     age: 5,
     group: module.exports.groups[16],
     type: 3,
-    name: "yoylelite",
+    name: "gold mine",
     desc: "allows you to mine gold",
-    req: ["stone", 200, "points", 1000],
+    req: ["stone", 200, "points", 2000],
     //health: 5000,
     iconLineMult: 12,
     scale: 65,
