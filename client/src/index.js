@@ -2715,11 +2715,11 @@ function getItemSprite(obj, asIcon) {
             renderCircle(0, 0, tmpScale, tmpContext);
             tmpContext.fillStyle = "#c9b758";
             renderCircle(0, 0, tmpScale / 2, tmpContext, true);
-        } else if (obj.name == "windmill" || obj.name == "faster windmill" || obj.name == "power mill") {
+        } else if (obj.name == "windmill" || obj.name == "turbine" || obj.name == "generator") {
             tmpContext.fillStyle = "#a5974c";
             renderCircle(0, 0, obj.scale, tmpContext);
             tmpContext.fillStyle = "#c9b758";
-            renderRectCircle(0, 0, obj.scale * 1.5, 29, 4, tmpContext);
+            renderRectCircle(0, 0, obj.scale * 1.5, 29, (obj.name == "generator")?8:(obj.name == "turbine")?6:4, tmpContext);
             tmpContext.fillStyle = "#a5974c";
             renderCircle(0, 0, obj.scale * 0.5, tmpContext);
         } else if (obj.name == "mine") {
@@ -2738,6 +2738,19 @@ function getItemSprite(obj, asIcon) {
                 tmpContext.fill();
                 if (!i) tmpContext.stroke();
             }
+        } else if (obj.name == "shrub") {
+            renderBlob(tmpContext, 5, tmpObj.scale, tmpObj.scale * 0.7);
+                tmpContext.fillStyle = biomeID ? "#e3f1f4" : "#89a54c";
+                tmpContext.fill();
+                tmpContext.stroke();
+                tmpContext.fillStyle = biomeID ? "#6a64af" : "#c15555";
+                var tmpRange;
+                var berries = 3;
+                var rotVal = mathPI2 / berries;
+                for (var i = 0; i < berries; ++i) {
+                    tmpRange = UTILS.randInt(obj.scale / 3.5, obj.scale / 2.3);
+                    renderCircle(tmpRange * Math.cos(rotVal * i), tmpRange * Math.sin(rotVal * i), UTILS.randInt(10, 12), tmpContext);
+                }
         } else if (obj.name == "door") {
             tmpContext.fillStyle = "#a5974c";
             renderStar(tmpContext, 3, obj.scale * 1.1, obj.scale * 1.1);
