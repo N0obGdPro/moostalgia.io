@@ -2740,10 +2740,10 @@ function getItemSprite(obj, asIcon) {
             }
         } else if (obj.name == "shrub") {
             renderBlob(tmpContext, 5, tmpObj.scale, tmpObj.scale * 0.7);
-                tmpContext.fillStyle = biomeID ? "#e3f1f4" : "#89a54c";
+                tmpContext.fillStyle = "#89a54c";
                 tmpContext.fill();
                 tmpContext.stroke();
-                tmpContext.fillStyle = biomeID ? "#6a64af" : "#c15555";
+                tmpContext.fillStyle = "#c15555";
                 var tmpRange;
                 var berries = 3;
                 var rotVal = mathPI2 / berries;
