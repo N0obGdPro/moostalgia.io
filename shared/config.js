@@ -71,7 +71,7 @@ var weaponVariants = [{
 }];
 
 // Player spawn defaults
-var defaultStartItems = [0, 3, 8, 12, 15];  // Item IDs players spawn with
+var defaultStartItems = [0, 3, 8, 12];  // Item IDs players spawn with (15 is mine.)
 var defaultStartWeapons = [0];  // Weapon IDs players spawn with
 var startResources = {
     normal: 0,    // Starting score/points
@@ -87,13 +87,13 @@ var sandboxBuildLimits = {
 };
 
 var sandboxbool = true;
-var sandboxmillmulti = 999999999;
+var sandboxmillmulti = 1000;
 
 // World resource spawn counts (trees/bushes are per area, rocks/gold are total for entire map)
 var worldSpawnCounts = {
-    treesPerArea: 7,
-    bushesPerArea: 3,
-    totalRocks: 29,
+    treesPerArea: 15,
+    bushesPerArea: 8,
+    totalRocks: 30,
     goldOres: 5
 };
 
