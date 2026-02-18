@@ -1225,14 +1225,6 @@ function prepareUI() {
                 },
                 parent: actionBar
             });
-            var tmpUnit = document.getElementById('actionBarItem' + i);
-            tmpUnit.onmouseover = UTILS.checkTrusted(function () {
-                showItemInfo(items.weapons[i], true);
-            });
-            tmpUnit.onclick = UTILS.checkTrusted(function () {
-                selectToBuild(i, true);
-            });
-            UTILS.hookTouchEvents(tmpUnit);
         })(i);
     }
     for (var i = 0; i < (items.list.length + items.weapons.length); ++i) {
@@ -1272,6 +1264,14 @@ function prepareUI() {
                     document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
                     }
                 }
+                var tmpUnit = document.getElementById('actionBarItem' + i);
+                tmpUnit.onmouseover = UTILS.checkTrusted(function () {
+                    showItemInfo(items.weapons[i], true);
+                });
+                tmpUnit.onclick = UTILS.checkTrusted(function () {
+                    selectToBuild(i, true);
+                });
+                UTILS.hookTouchEvents(tmpUnit);
             } else {
                 var tmpSprite = getItemSprite(items.list[i-items.weapons.length], true);
                 var tmpScale = Math.min(tmpCanvas.width - config.iconPadding, tmpSprite.width);
@@ -1284,15 +1284,14 @@ function prepareUI() {
                 tmpContext.globalCompositeOperation = "source-atop";
                 tmpContext.fillRect(-tmpScale / 2, -tmpScale / 2, tmpScale, tmpScale);
                 document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
-            }
-            var tmpUnit = document.getElementById('actionBarItem' + i);
-            tmpUnit.onmouseover = UTILS.checkTrusted(function () {
-                showItemInfo(items.weapons[i], true);
-            });
-            tmpUnit.onclick = UTILS.checkTrusted(function () {
-                selectToBuild(i, true);
-            });
-            UTILS.hookTouchEvents(tmpUnit);
+                var tmpUnit = document.getElementById('actionBarItem' + i);
+                tmpUnit.onmouseover = UTILS.checkTrusted(function () {
+                    showItemInfo(items.list[i - items.weapons.length]);
+                });
+                tmpUnit.onclick = UTILS.checkTrusted(function () {
+                    selectToBuild(i - items.weapons.length);
+                });
+                UTILS.hookTouchEvents(tmpUnit);
         })(i);
     }
 
