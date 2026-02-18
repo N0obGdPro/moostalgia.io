@@ -577,7 +577,7 @@ module.exports.list = [{
     placeOffset: 5
 }, {
     age: 5,
-    pre: 3,
+    pre: 1,
     group: module.exports.groups[3],
     name: "turbine",
     desc: "generates more gold over time",
@@ -591,8 +591,8 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: 5
 }, {
-    age: 8,
-    pre: 1,
+    age: 6,
+    pre: 3,
     group: module.exports.groups[3],
     name: "generator",
     desc: "generates more gold over time",
