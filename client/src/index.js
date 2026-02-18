@@ -1225,14 +1225,6 @@ function prepareUI() {
                 },
                 parent: actionBar
             });
-            var tmpUnit = document.getElementById('actionBarItem' + i);
-            tmpUnit.onmouseover = UTILS.checkTrusted(function () {
-                showItemInfo(items.list[i - items.weapons.length]);
-            });
-            tmpUnit.onclick = UTILS.checkTrusted(function () {
-                 selectToBuild(i - items.weapons.length);
-             });
-             UTILS.hookTouchEvents(tmpUnit);
         })(i);
     }
     for (var i = 0; i < (items.list.length + items.weapons.length); ++i) {
@@ -1246,27 +1238,27 @@ function prepareUI() {
             tmpContext.mozImageSmoothingEnabled = false;
             if (items.weapons[i]) {
                 
-            if (items.weapons[i].src == "hammer_1" || items.weapons[i].src == "axe_1" || items.weapons[i].src == "sword_1") {
-                tmpContext.lineWidth = 3;
-                tmpContext.translate(-10, 5); // ORG: -10, 5
-                tmpContext.rotate(1.3 * Math.PI); // ORG: 1.3 * Math.PI
-                tmpContext.strokeStyle = outlineColor;
-                tmpContext.imageSmoothingEnabled = !1;
-                tmpContext.webkitImageSmoothingEnabled = !1;
-                tmpContext.mozImageSmoothingEnabled = !1;
-                renderTool(items.weapons[i], null, 0, 0, tmpContext, 0.35);
-                document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
+                if (items.weapons[i].src == "hammer_1" || items.weapons[i].src == "axe_1" || items.weapons[i].src == "sword_1") {
+                    tmpContext.lineWidth = 3;
+                    tmpContext.translate(-10, 5); // ORG: -10, 5
+                    tmpContext.rotate(1.3 * Math.PI); // ORG: 1.3 * Math.PI
+                    tmpContext.strokeStyle = outlineColor;
+                     tmpContext.imageSmoothingEnabled = !1;
+                    tmpContext.webkitImageSmoothingEnabled = !1;
+                    tmpContext.mozImageSmoothingEnabled = !1;
+                    renderTool(items.weapons[i], null, 0, 0, tmpContext, 0.35);
+                    document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
 
-            } else {
-                tmpContext.rotate((Math.PI/4)+Math.PI);
-                var tmpSprite = new Image();
-                toolSprites[items.weapons[i].src] = tmpSprite;
-                tmpSprite.onload = function() {
+                } else {
+                    tmpContext.rotate((Math.PI/4)+Math.PI);
+                    var tmpSprite = new Image();
+                    toolSprites[items.weapons[i].src] = tmpSprite;
+                    tmpSprite.onload = function() {
                     this.isLoaded = true;
                     var tmpPad = 1 / (this.height / this.width);
                     var tmpMlt = (items.weapons[i].iPad || 1);
                     tmpContext.drawImage(this, -(tmpCanvas.width*tmpMlt*config.iconPad*tmpPad)/2, -(tmpCanvas.height*tmpMlt*config.iconPad)/2,
-                        tmpCanvas.width*tmpMlt*tmpPad*config.iconPad, tmpCanvas.height*tmpMlt*config.iconPad);
+                    tmpCanvas.width*tmpMlt*tmpPad*config.iconPad, tmpCanvas.height*tmpMlt*config.iconPad);
                     tmpContext.fillStyle = "rgba(0, 0, 70, 0)";
                     tmpContext.globalCompositeOperation = "source-atop";
                     tmpContext.fillRect(-tmpCanvas.width / 2, -tmpCanvas.height / 2, tmpCanvas.width, tmpCanvas.height);
@@ -1274,7 +1266,15 @@ function prepareUI() {
                     document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
                     
                     
-            } 
+                } 
+                var tmpUnit = document.getElementById('actionBarItem' + i);
+                tmpUnit.onmouseover = UTILS.checkTrusted(function () {
+                    showItemInfo(items.weapons[i], true);
+                });
+                tmpUnit.onclick = UTILS.checkTrusted(function () {
+                    selectToBuild(i, true);
+                });
+                UTILS.hookTouchEvents(tmpUnit);
             }
 
 
@@ -1292,6 +1292,15 @@ function prepareUI() {
                 tmpContext.globalCompositeOperation = "source-atop";
                 tmpContext.fillRect(-tmpScale / 2, -tmpScale / 2, tmpScale, tmpScale);
                 document.getElementById('actionBarItem' + i).style.backgroundImage = "url(" + tmpCanvas.toDataURL() + ")";
+                
+                var tmpUnit = document.getElementById('actionBarItem' + i);
+                tmpUnit.onmouseover = UTILS.checkTrusted(function () {
+                    showItemInfo(items.weapons[i], true);
+                });
+                tmpUnit.onclick = UTILS.checkTrusted(function () {
+                    selectToBuild(i, true);
+                });
+                UTILS.hookTouchEvents(tmpUnit);
             }
         })(i);
     }
@@ -2752,13 +2761,13 @@ function getItemSprite(obj, asIcon) {
                     tmpRange = UTILS.randInt(tempobjd / 3.5, tempobjd / 2.3);
                     renderCircle(tmpRange * Math.cos(rotVal * i), tmpRange * Math.sin(rotVal * i), UTILS.randInt(10, 12), tmpContext);
                 }
-        } else if (obj.name == "yoylelite") {
-            tmpContext.fillStyle = "#8C5591";
-            renderStar(tmpContext, 2.5, obj.scale, obj.scale);
+        } else if (obj.name == "gold mine") {
+            tmpContext.fillStyle = "#e0c655";
+            renderStar(tmpContext, 3, obj.scale, obj.scale);
             tmpContext.fill();
             tmpContext.stroke();
-            tmpContext.fillStyle = "#F9F466";
-            renderStar(tmpContext, 2.5, obj.scale * 0.3, obj.scale * 0.65);
+            tmpContext.fillStyle = "#ebdca3";
+            renderStar(tmpContext, 3, obj.scale * 0.55, obj.scale * 0.65);
             tmpContext.fill();
         } else if (obj.name == "door") {
             tmpContext.fillStyle = "#a5974c";
