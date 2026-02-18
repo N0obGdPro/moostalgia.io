@@ -24,7 +24,7 @@ module.exports.groups = [{
     id: 4,
     name: "mine",
     place: true,
-    limit: 1,
+    limit: 2,
     layer: 0
 }, {
     id: 5,
@@ -91,6 +91,12 @@ module.exports.groups = [{
     name: "bush",
     place: true,
     limit: 4,
+    layer: 0
+}, {
+    id: 16,
+    name: "yoylelite",
+    place: true,
+    limit: 1,
     layer: 0
 }, 
 ];
@@ -592,7 +598,7 @@ module.exports.list = [{
     placeOffset: 5
 }, {
     age: 6,
-    pre: 3,
+    pre: 5,
     group: module.exports.groups[3],
     name: "generator",
     desc: "generates more gold over time",
@@ -612,7 +618,7 @@ module.exports.list = [{
     name: "mine",
     desc: "allows you to mine stone",
     req: ["wood", 20, "stone", 100],
-    health: 5000,
+    //health: 5000,
     iconLineMult: 12,
     scale: 65,
     holdOffset: 20,
@@ -624,12 +630,12 @@ module.exports.list = [{
     name: "sapling",
     desc: "allows you to farm wood",
     req: ["wood", 150],
-    health: 5000,
+    //health: 5000,
     iconLineMult: 12,
     //colDiv: 0.5,
-    scale: 110,
+    scale: 90,
     holdOffset: 50,
-    placeOffset: -15
+    placeOffset: -10
 }, {
     age: 5,
     group: module.exports.groups[15],
@@ -637,12 +643,24 @@ module.exports.list = [{
     name: "shrub",
     desc: "allows you to collect food",
     req: ["food", 125, "wood", 70],
-    health: 5000,
+    //health: 5000,
     iconLineMult: 12,
     //colDiv: 0.5,
     scale: 60,
     holdOffset: 50,
-    placeOffset: -15
+    placeOffset: 0
+}, {
+    //age: 5,
+    group: module.exports.groups[16],
+    type: 4,
+    name: "yoylelite",
+    desc: "allows you to mine gold",
+    req: ["stone", 200, "points", 1000],
+    //health: 5000,
+    iconLineMult: 12,
+    scale: 250,
+    holdOffset: 20,
+    placeOffset: 0
 }, {
     age: 4,
     group: module.exports.groups[5],
