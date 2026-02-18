@@ -86,7 +86,14 @@ module.exports.groups = [{
     place: true,
     limit: 2,
     layer: 0
-},];
+}, {
+    id: 15,
+    name: "bush",
+    place: true,
+    limit: 4,
+    layer: 0
+}, 
+];
 
 exports.projectiles = [{
     indx: 0,
@@ -572,7 +579,7 @@ module.exports.list = [{
     age: 5,
     pre: 1,
     group: module.exports.groups[3],
-    name: "faster windmill",
+    name: "turbine",
     desc: "generates more gold over time",
     req: ["wood", 60, "stone", 20],
     health: 500,
@@ -580,14 +587,14 @@ module.exports.list = [{
     turnSpeed: 0.0025,
     spritePadding: 25,
     iconLineMult: 12,
-    scale: 45,
+    scale: 50,
     holdOffset: 20,
     placeOffset: 5
 }, {
     //age: 8,
     pre: 1,
     group: module.exports.groups[3],
-    name: "power mill",
+    name: "generator",
     desc: "generates more gold over time",
     req: ["wood", 100, "stone", 50],
     health: 800,
@@ -595,7 +602,7 @@ module.exports.list = [{
     turnSpeed: 0.005,
     spritePadding: 25,
     iconLineMult: 12,
-    scale: 47,
+    scale: 55,
     holdOffset: 20,
     placeOffset: 5
 }, {
@@ -610,7 +617,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: 0
 }, {
-    //age: 5,
+    age: 5,
     group: module.exports.groups[11],
     type: 0,
     name: "sapling",
@@ -622,7 +629,19 @@ module.exports.list = [{
     holdOffset: 50,
     placeOffset: -15
 }, {
-    //age: 4,
+    age: 5,
+    group: module.exports.groups[15],
+    type: 0,
+    name: "shrub",
+    desc: "allows you to collect food",
+    req: ["food", 125, "wood", 70],
+    iconLineMult: 12,
+    colDiv: 0.5,
+    scale: 52,
+    holdOffset: 50,
+    placeOffset: -15
+}, {
+    age: 4,
     group: module.exports.groups[5],
     name: "pit trap",
     desc: "pit that traps enemies if they walk over it",
