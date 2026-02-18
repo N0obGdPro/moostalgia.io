@@ -652,13 +652,13 @@ module.exports.list = [{
 }, {
     age: 5,
     group: module.exports.groups[16],
-    type: 4,
+    type: 3,
     name: "yoylelite",
     desc: "allows you to mine gold",
     req: ["stone", 200, "points", 1000],
     //health: 5000,
     iconLineMult: 12,
-    scale: 85,
+    scale: 65,
     holdOffset: 20,
     placeOffset: 0
 }, {
