@@ -631,7 +631,7 @@ module.exports.list = [{
 }, {
     age: 5,
     group: module.exports.groups[15],
-    type: 0,
+    type: 1,
     name: "shrub",
     desc: "allows you to collect food",
     req: ["food", 125, "wood", 70],
