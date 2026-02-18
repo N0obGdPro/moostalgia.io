@@ -2,6 +2,11 @@ Moostalgia IO - Game Version History
 
 MOOMOO 2 is for Moostalgia.io right now! ;)
 
+0.13 - (18/02/2026):
+> Added Anonymous Fedora (replaces bush gear but TIPS: wear and place and go inside shrubs.)
+> Removed Bush Gear (because it was bad feature of texture issues)
+> Changed big bigger store menu
+
 0.12 - (18/02/2026):
 > Changed Yoylelite to Gold Mine
 > Fixed Hovering Items for weapons
