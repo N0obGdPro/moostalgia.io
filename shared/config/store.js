@@ -221,7 +221,7 @@ module.exports.hats = [{
     name: "Anonymous Fedora",
     price: 10000,
     scale: 120,
-    desc: "hides your name and health tag"
+    desc: "Hides your name tag and health bar"
 }, {
     id: 21,
     name: "Plague Mask",
