@@ -647,7 +647,7 @@ module.exports.list = [{
     //health: 5000,
     iconLineMult: 12,
     //colDiv: 0.5,
-    scale: 60,
+    scale: 72,
     holdOffset: 50,
     placeOffset: 0
 }, {
