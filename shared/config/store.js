@@ -329,7 +329,7 @@ module.exports.hats = [{
 }, {
     id: 29,
     name: "Technoblade Head",
-    //dontSell: true,
+    dontSell: true,
     atkSpd: 0.001,
     healthRegen: 1000,
     dmgMult: 0,
