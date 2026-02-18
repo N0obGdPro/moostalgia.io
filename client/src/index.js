@@ -2751,6 +2751,14 @@ function getItemSprite(obj, asIcon) {
                     tmpRange = UTILS.randInt(obj.scale / 3.5, obj.scale / 2.3);
                     renderCircle(tmpRange * Math.cos(rotVal * i), tmpRange * Math.sin(rotVal * i), UTILS.randInt(10, 12), tmpContext);
                 }
+        } else if (obj.name == "yoylelite") {
+            tmpContext.fillStyle = "#8C5591";
+            renderStar(tmpContext, 4.5, obj.scale, obj.scale);
+            tmpContext.fill();
+            tmpContext.stroke();
+            tmpContext.fillStyle = "#F9F466";
+            renderStar(tmpContext, 2.25, obj.scale * 0.55, obj.scale * 0.65);
+            tmpContext.fill();
         } else if (obj.name == "door") {
             tmpContext.fillStyle = "#a5974c";
             renderStar(tmpContext, 3, obj.scale * 1.1, obj.scale * 1.1);
