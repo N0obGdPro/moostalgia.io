@@ -8,6 +8,7 @@ module.exports.hats = [{
 }, {
     id: 51,
     name: "Sid Suit",
+    dontSell: true,
     price: 0,
     scale: 120,
     desc: "Sidney de Vries is developer of MooMoo.io"
@@ -42,6 +43,7 @@ module.exports.hats = [{
 }, {
     id: 38,
     name: "ShinZy Helmet",
+    dontSell: true,
     price: 0,
     scale: 240,
     desc: "SpikZy ShinZy"
@@ -219,6 +221,7 @@ module.exports.hats = [{
 }, {
     id: 10,
     name: "Anonymous Fedora",
+    dontSell: true,
     price: 10000,
     scale: 120,
     desc: "Hides your name tag and health bar"
