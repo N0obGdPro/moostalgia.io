@@ -496,7 +496,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: -5
 }, {
-    age: 6,
+    //age: 6,
     pre: 6,
     group: module.exports.groups[1],
     name: "rock wall",
@@ -507,7 +507,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: -5
 }, {
-    age: 7,
+    //age: 7,
     pre: 7,
     group: module.exports.groups[1],
     name: "boulder wall",
@@ -585,7 +585,7 @@ module.exports.list = [{
     age: 5,
     pre: 1,
     group: module.exports.groups[3],
-    name: "turbine",
+    name: "faster windmill",
     desc: "generates more gold over time",
     req: ["wood", 60, "stone", 20],
     health: 500,
@@ -597,7 +597,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: 5
 }, {
-    age: 6,
+    //age: 6,
     pre: 16,
     group: module.exports.groups[3],
     name: "generator",
@@ -612,7 +612,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: 5
 }, {
-    age: 5,
+    //age: 5,
     group: module.exports.groups[4],
     type: 2,
     name: "mine",
@@ -624,7 +624,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: 0
 }, {
-    age: 5,
+    //age: 5,
     group: module.exports.groups[11],
     type: 0,
     name: "sapling",
@@ -638,7 +638,7 @@ module.exports.list = [{
     holdOffset: 50,
     placeOffset: -10
 }, {
-    age: 5,
+    //age: 5,
     group: module.exports.groups[15],
     type: 1,
     name: "shrub",
@@ -652,7 +652,7 @@ module.exports.list = [{
     holdOffset: 50,
     placeOffset: 0
 }, {
-    age: 5,
+    //age: 5,
     group: module.exports.groups[16],
     type: 3,
     name: "gold mine",
