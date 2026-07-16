@@ -593,7 +593,7 @@ module.exports.list = [{
     turnSpeed: 0.0025,
     spritePadding: 25,
     iconLineMult: 12,
-    scale: 50,
+    scale: 40,
     holdOffset: 20,
     placeOffset: 5
 }, {
