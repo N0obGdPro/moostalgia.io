@@ -1,6 +1,9 @@
 Moostalgia IO - Game Version History
 
-MOOMOO 2 is for Moostalgia.io right now! ;)
+0.14 - (16/07/2026) Last Update:
+> Removed Anonymous Fedora
+> Removed Yoylelite, Rock, Shoulder, Sapling, and Shrub.
+> Hided Weapons Icon in Hotbar
 
 0.13 - (18/02/2026):
 > Added Anonymous Fedora (replaces bush gear but TIPS: wear and place and go inside shrubs or saplings.)
