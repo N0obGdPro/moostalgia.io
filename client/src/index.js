@@ -1324,9 +1324,9 @@ function updateItems(data, wpn) {
         var tmpI = (items.weapons.length + i);
         document.getElementById("actionBarItem" + tmpI).style.display = (player.items.indexOf(items.list[i].id) >= 0) ? "inline-block" : "none";
     }
-    /*for (var i = 0; i < items.weapons.length; ++i) {
-        document.getElementById("actionBarItem" + i).style.display = (player.weapons[items.weapons[i].type] == items.weapons[i].id) ? "inline-block" : "none";
-    }*/
+    for (var i = 0; i < items.weapons.length; ++i) {
+        document.getElementById("actionBarItem" + i).style.display = /*(player.weapons[items.weapons[i].type] == items.weapons[i].id) ? "inline-block" :*/ "none";
+    }
 }
 
 function setUseNativeResolution(useNative) {
