@@ -1214,7 +1214,7 @@ function prepareUI() {
     updateSkinColorPicker();
 
     UTILS.removeAllChildren(actionBar);
-    /*for (var i = 0; i < (items.weapons.length + items.list.length); ++i) {
+    for (var i = 0; i < (items.weapons.length + items.list.length); ++i) {
         (function (i) {
             UTILS.generateElement({
                 id: "actionBarItem" + i,
@@ -1226,7 +1226,7 @@ function prepareUI() {
                 parent: actionBar
             });
         })(i);
-    }*/
+    }
     for (var i = 0; i < (items.list.length + items.weapons.length); ++i) {
         (function(i) {
             var tmpCanvas = document.createElement('canvas');
