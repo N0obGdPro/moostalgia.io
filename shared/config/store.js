@@ -64,12 +64,14 @@ module.exports.hats = [{
 }, {
     id: 42,
     name: "10th Big Cake",
+    dontSell: true,
     price: 0,
     scale: 480,
     desc: "Happy M10Moo.io Anniversary community cosmetic!"
 }, {
     id: 43,
     name: "N.G.P. Top Hat",
+    dontSell: true,
     price: 0,
     scale: 240,
     desc: "hello world! ;)"
