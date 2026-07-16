@@ -1324,9 +1324,9 @@ function updateItems(data, wpn) {
         var tmpI = (items.weapons.length + i);
         document.getElementById("actionBarItem" + tmpI).style.display = (player.items.indexOf(items.list[i].id) >= 0) ? "inline-block" : "none";
     }
-    for (var i = 0; i < items.weapons.length; ++i) {
+    /*for (var i = 0; i < items.weapons.length; ++i) {
         document.getElementById("actionBarItem" + i).style.display = (player.weapons[items.weapons[i].type] == items.weapons[i].id) ? "inline-block" : "none";
-    }
+    }*/
 }
 
 function setUseNativeResolution(useNative) {
@@ -2715,11 +2715,11 @@ function getItemSprite(obj, asIcon) {
             renderCircle(0, 0, tmpScale, tmpContext);
             tmpContext.fillStyle = "#c9b758";
             renderCircle(0, 0, tmpScale / 2, tmpContext, true);
-        } else if (obj.name == "windmill" || obj.name == "turbine" || obj.name == "generator") {
+        } else if (obj.name == "windmill" || obj.name == "faster windmill") {
             tmpContext.fillStyle = "#a5974c";
             renderCircle(0, 0, obj.scale, tmpContext);
             tmpContext.fillStyle = "#c9b758";
-            renderRectCircle(0, 0, obj.scale * 1.5, 29, (obj.name == "generator")?8:(obj.name == "turbine")?6:4, tmpContext);
+            renderRectCircle(0, 0, obj.scale * 1.5, 29, 4, tmpContext);
             tmpContext.fillStyle = "#a5974c";
             renderCircle(0, 0, obj.scale * 0.5, tmpContext);
         } else if (obj.name == "mine") {
