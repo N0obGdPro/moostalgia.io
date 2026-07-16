@@ -664,7 +664,7 @@ module.exports.list = [{
     holdOffset: 20,
     placeOffset: 0
 }, {
-    age: 4,
+    //age: 4,
     group: module.exports.groups[5],
     name: "pit trap",
     desc: "pit that traps enemies if they walk over it",
