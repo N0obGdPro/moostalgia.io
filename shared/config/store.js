@@ -92,6 +92,7 @@ module.exports.hats = [{
 }, {
     id: 18,
     name: "Explorer Hat",
+    dontSell: true,
     price: 100,
     scale: 120,
     desc: "no effect"
@@ -108,8 +109,15 @@ module.exports.hats = [{
     scale: 120,
     desc: "no effect"
 }, {
+    id: 3,
+    name: "Stetson Hat",
+    price: 500,
+    scale: 120,
+    desc: "no effect"
+}, {
     id: 15,
     name: "Winter Cap",
+    dontSell: true,
     price: 1000,
     scale: 120,
     desc: "no effect",
@@ -142,6 +150,7 @@ module.exports.hats = [{
 }, {
     id: 50,
     name: "Honeycrisp Hat",
+    dontSell: true,
     price: 5000,
     scale: 120,
     desc: "slowly regenerates health over time",
@@ -164,6 +173,7 @@ module.exports.hats = [{
 }, {
     id: 23,
     name: "Anti Venom Gear",
+    dontSell: true,
     price: 4000,
     scale: 120,
     desc: "makes you immune to poison",
@@ -203,12 +213,14 @@ module.exports.hats = [{
 }, {
     id: 22,
     name: "Emp Helmet",
+    dontSell: true,
     price: 6000,
     scale: 120,
     desc: "no effect",
 }, {
     id: 12,
     name: "Booster Hat",
+    dontSell: true,
     price: 6000,
     scale: 120,
     desc: "increases your movement speed",
@@ -216,6 +228,7 @@ module.exports.hats = [{
 }, {
     id: 26,
     name: "Barbarian Armor",
+    dontSell: true,
     price: 8000,
     scale: 120,
     desc: "knocks back enemies that attack you",
@@ -230,6 +243,7 @@ module.exports.hats = [{
 }, {
     id: 21,
     name: "Plague Mask",
+    dontSell: true,
     price: 10000,
     scale: 120,
     desc: "melee attacks deal poison damage",
@@ -255,6 +269,7 @@ module.exports.hats = [{
 }, {
     id: 11,
     name: "Spike Gear",
+    dontSell: true,
     //topSprite: true,
     price: 10000,
     scale: 120,
@@ -277,6 +292,7 @@ module.exports.hats = [{
 }, {
     id: 20,
     name: "Samurai Armor",
+    dontSell: true,
     price: 15000,
     scale: 120,
     desc: "increased attack speed and fire rate",
@@ -284,6 +300,7 @@ module.exports.hats = [{
 }, {
     id: 58,
     name: "Bushido Armor",
+    dontSell: true,
     price: 15000,
     scale: 120,
     desc: "restores health when you deal damage",
@@ -291,6 +308,7 @@ module.exports.hats = [{
 }, {
     id: 27,
     name: "Scavenger Gear",
+    dontSell: true,
     price: 15000,
     scale: 120,
     desc: "earn double points for each kill",
