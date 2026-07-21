@@ -203,12 +203,13 @@ export class ObjectManager {
         };
 
         // REMOVE ALL FROM PLAYER:
-        this.removeAllItems = function(sid, server) {
+        this.removeAllItems = function(sid) {
             for (var i = 0; i < gameObjects.length; ++i) {
                 if (gameObjects[i].active && gameObjects[i].owner && gameObjects[i].owner.sid == sid) {
                     this.disableObj(gameObjects[i]);
                 }
             }
+
             if (server) {
                 server.broadcast("R", sid);
             }
