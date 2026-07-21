@@ -85,7 +85,7 @@ module.exports.groups = [{
     name: "door",
     place: true,
     limit: 2,
-    layer: 0
+    layer: -1
 }, {
     id: 15,
     name: "bush",
@@ -770,17 +770,14 @@ module.exports.list = [{
 }, {
     age: 4,
     group: module.exports.groups[14],
-    name: "door",
-    desc: "allows team mates to enter your village",
-    req: ["wood", 20, "stone", 5],
-    ignoreCollision: true,
+	name: "door",
+	desc: "allows team mates to enter your village",
+	req: ["wood", 20, "stone", 5],
 	ignoreFriendly: true,
-    //hideFromEnemy: false,
-    health: 500,
-    //colDiv: 0,
-    scale: 47,
-    holdOffset: 20,
-    placeOffset: -5
+	health: 500,
+	scale: 52,
+	holdOffset: 20,
+	placeOffset: -5
 }];
 
 for (var i = 0; i < module.exports.list.length; ++i) {
