@@ -288,7 +288,7 @@ export class ObjectManager {
                             player.xVel *= 0.75;
                             player.yVel *= 0.75;
                         }
-                        if (other.dmg && other.owner != player && !(other.owner && other.owner.team && other.owner.team == player.team)) {
+                        if (other.dmg && other.owner != player && !(other.ignoreFriendly && other.owner && (other.owner == player || (other.owner.team && other.owner.team == player.team)))) {
                             player.changeHealth(-other.dmg, other.owner, other);
                             var tmpSpd = 1.5 * (other.weightM || 1);
                             player.xVel += tmpSpd * mathCOS(tmpDir);
@@ -306,7 +306,7 @@ export class ObjectManager {
                             }
                         }
                     } else {
-                        if (other.trap && !player.noTrap && other.owner != player && !(other.owner && other.owner.team && other.owner.team == player.team)) {
+                        if (other.trap && !player.noTrap && other.owner != player && !(other.ignoreFriendly && other.owner && (other.owner == player || (other.owner.team && other.owner.team == player.team)))) {
                             player.lockMove = true;
                             other.hideFromEnemy = false;
                         } else {
